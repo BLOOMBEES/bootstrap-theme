@@ -1,0 +1,11 @@
+- title: Common
+  pages:
+    - title: Fonts
+    - title: Variables
+- title: Components
+  pages:
+    - title: Buttons
+    - title: Icons
+    - title: Input
+    - title: Tooltips
+    - title: Modals
