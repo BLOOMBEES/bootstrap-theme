@@ -2,8 +2,10 @@
 
 </footer>
 
-<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<!--<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+<script src="{{ site.baseurl }}/dist/js/common.min.js"></script>
+<script src="{{ site.baseurl }}/dist/js/main.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/vendor/tether.min.js"></script>
 
@@ -17,8 +19,8 @@
   <script src="{{ site.baseurl }}/assets/js/docs.min.js"></script>
 {% else %}
   {% for file in site.data.configBridge.paths.docsJs %}
-    <script src="{{ site.baseurl }}/dist/js/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/dist/js/bloombees-bootstrap-theme.js"></script>
+    <!--<script src="{{ site.baseurl }}/dist/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/dist/js/bloombees-bootstrap-theme.js"></script>-->
   {% endfor %}
 {% endif %}
 

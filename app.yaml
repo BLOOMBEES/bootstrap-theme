@@ -4,9 +4,9 @@ api_version: 1
 
 handlers:
 
-- url: /(.+\.(html|css|js|gif|png|jpg|css|ico|txt|htm|js|ttf|woff|etc|svg))$
+- url: /(.+\.(html|css|js|gif|png|jpg|css|ico|txt|htm|js|ttf|woff|etc|svg|ico))$
   static_files: docs/\1
-  upload: .+\.(html|css|js|gif|png|jpg|css|ico|txt|htm|js|ttf|woff|etc|svg)$
+  upload: .+\.(html|css|js|gif|png|jpg|css|ico|txt|htm|js|ttf|woff|etc||ico)$
   application_readable: true
   secure: optional
 

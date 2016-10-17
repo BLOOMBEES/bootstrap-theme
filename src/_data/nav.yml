@@ -10,3 +10,7 @@
     - title: Tooltips
     - title: Modals
     - title: Headers
+    - title: Tabs
+- title: Templates
+  pages:
+    - title: Text page
