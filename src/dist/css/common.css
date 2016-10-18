@@ -7457,61 +7457,20 @@ button.close {
 .bb-icon-verified-secured:before {
   content: ""; }
 
-.bb-input {
-  margin: 0 0 10px; }
-  .bb-input label {
-    width: 100%;
-    text-align: left;
-    padding: 0 0 4px;
-    font-size: 16px;
-    margin: 0;
-    line-height: normal;
-    font-weight: 400;
-    text-transform: none;
-    left: 10px;
-    color: #3b3b3b;
-    top: 16px; }
-  .bb-input input, .bb-input textarea {
-    padding: 15px 10px 0;
-    height: 50px;
-    line-height: 45px;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.6); }
-    .bb-input input.ng-valid, .bb-input textarea.ng-valid {
-      border-color: #46841e;
-      color: #46841e; }
-    .bb-input input.ng-not-empty.ng-invalid, .bb-input textarea.ng-not-empty.ng-invalid {
-      border-color: #fc4a64;
-      color: #fc4a64; }
-  .bb-input.dirty label {
-    font-size: 11px;
-    top: 3px; }
-  .bb-input.has-error input, .bb-input.has-error textarea {
-    border-color: #fc4a64;
-    box-shadow: none; }
-  .bb-input .input-info p {
-    margin: 0 0 -6px; }
-  .bb-input__top0 {
-    margin-top: 0; }
-
-.bb-form-footer {
-  margin-top: 30px; }
-  .bb-form-footer a {
-    color: #fff;
-    text-decoration: underline; }
-  @media (max-width: 600px) {
-    .bb-form-footer button {
-      border-radius: 3px; } }
-
 .bg-white {
-  background-color: #fff; }
-  .bg-white:after {
-    content: "";
-    display: block;
-    position: relative;
-    height: 5%;
-    width: 100%; }
+  background-color: #fff;
+  /*&:after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 5%;
+      width: 100%;
+    }*/ }
+
+.test {
+  background: url("https://cdn.bloombees.com/cms/images/landing/ppaymentbkg.png") no-repeat; }
+  .test .parallax--layer__back {
+    background: url("https://cdn.bloombees.com/cms/images/landing/ppaymentbkg.png") no-repeat; }
 
 .header--colored {
   width: 100%;
@@ -7537,13 +7496,14 @@ button.close {
         font-size: 1.5em; } }
 
 .header--subtitle {
-  text-align: center;
   margin-bottom: 30px;
   margin-top: 30px; }
   .header--subtitle h2 {
     font-size: 40px; }
   .header--subtitle p {
     font-size: 25px; }
+  .header--subtitle__white {
+    color: #fff; }
 
 .header--bg {
   background-color: #002626;
@@ -7572,11 +7532,6 @@ button.close {
   max-width: 900px;
   text-align: center;
   line-height: 1.7em; }
-
-#map {
-  width: 100%;
-  height: 300px;
-  margin-top: 60px; }
 
 .content--contact {
   max-width: 600px;
@@ -7652,14 +7607,6 @@ button.close {
     .content--privacy-policy {
       margin: 25px 1%;
       padding: 0px 25px; } }
-
-.bb-form__dark input, .bb-form__dark textarea {
-  border-color: #afafaf; }
-
-.bb-form .form-alert {
-  color: #fc4a64;
-  font-size: 12px;
-  position: relative; }
 
 .plus-bullet {
   display: none;
@@ -8014,6 +7961,9 @@ body.modal-open {
   margin-left: 21px;
   margin-top: -9px; }
 
+.logo--footer img {
+  margin: 0; }
+
 .topbar-pricing {
   min-width: 100px;
   display: inline-block;
@@ -8071,37 +8021,96 @@ body.modal-open {
     display: inline-block;
     margin-bottom: 2px; }
 
-.tabs ul li {
+.tabs ul[role="tablist"] li {
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 12px 0; }
-  .tabs ul li.active {
-    color: #939393; }
+  padding: 12px 0;
+  color: #939393; }
+  .tabs ul[role="tablist"] li.active {
+    color: #3b3b3b; }
 
-.tabs [role="tabpanel"] ul {
-  list-style: none;
-  padding: 0 16px; }
-  .tabs [role="tabpanel"] ul li {
-    padding-bottom: 0; }
-    .tabs [role="tabpanel"] ul li a {
-      padding: 0;
-      display: -ms-inline-flexbox;
-      display: inline-flex; }
-      .tabs [role="tabpanel"] ul li a img {
-        width: 44px;
-        height: 44px;
-        display: inline-block;
-        vertical-align: bottom;
-        border-radius: 50%;
-        border: 1px solid #ededed; }
-      .tabs [role="tabpanel"] ul li a div {
-        display: inline-block; }
-        .tabs [role="tabpanel"] ul li a div:first-child {
-          width: 25%; }
-        .tabs [role="tabpanel"] ul li a div:last-child {
-          width: 75%; }
+.tabs--flex {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.tabs .tab {
+  min-width: 100%;
+  transition: transform 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+  .tabs .tab--hide__left {
+    -ms-transform: translateX(-290px);
+    transform: translateX(-290px); }
+  .tabs .tab--hide__right {
+    -ms-transform: translateX(30px);
+    transform: translateX(30px); }
+  .tabs .tab--show__right {
+    -ms-transform: translateX(-260px);
+    transform: translateX(-260px); }
+
+.tabs [role="tabpanel"] {
+  max-height: 90%;
+  height: calc(100vh - 60px);
+  overflow-x: hidden; }
+  .tabs [role="tabpanel"] ul.notifications {
+    list-style: none;
+    padding: 0 16px; }
+    .tabs [role="tabpanel"] ul.notifications li {
+      padding-bottom: 0;
+      cursor: pointer; }
+      .tabs [role="tabpanel"] ul.notifications li a {
+        padding: 0;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        transition: all 0.2s ease-in; }
+        .tabs [role="tabpanel"] ul.notifications li a:hover {
+          opacity: 1; }
+        .tabs [role="tabpanel"] ul.notifications li a img {
+          width: 44px;
+          height: 44px;
+          display: inline-block;
+          vertical-align: bottom;
+          border-radius: 50%;
+          border: 1px solid #ededed; }
+        .tabs [role="tabpanel"] ul.notifications li a div {
+          display: inline-block; }
+          .tabs [role="tabpanel"] ul.notifications li a div:first-child {
+            width: 25%;
+            position: relative; }
+            .tabs [role="tabpanel"] ul.notifications li a div:first-child i {
+              position: absolute;
+              display: inline-block;
+              vertical-align: bottom;
+              border-radius: 50%;
+              border: 1px solid #ededed;
+              width: 23px;
+              height: 23px;
+              color: #fff;
+              background: #2ec6c6;
+              padding: 5px 3px;
+              bottom: 10px;
+              right: 0; }
+          .tabs [role="tabpanel"] ul.notifications li a div:last-child {
+            width: 75%; }
+            .tabs [role="tabpanel"] ul.notifications li a div:last-child p {
+              display: block;
+              width: 100%;
+              font-size: 12px;
+              line-height: normal;
+              color: #939393;
+              margin: 0 0 6px 10px;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased; }
+              .tabs [role="tabpanel"] ul.notifications li a div:last-child p .special-action {
+                color: #3b3b3b; }
+            .tabs [role="tabpanel"] ul.notifications li a div:last-child i {
+              margin-right: 5px; }
 
 .tabs .empty {
   text-align: center;
@@ -8416,6 +8425,10 @@ body.modal-open {
     .footer-container-links {
       display: inline-block;
       width: auto; } }
+  .footer-container-links .list-aside-btn {
+    margin: 0;
+    padding: 0;
+    text-align: right; }
 
 .footer-separator {
   width: 100%;
@@ -8549,16 +8562,7 @@ body.modal-open {
     color: #fff;
     border: 0;
     cursor: pointer;
-    font-size: 14px;
-    /*border-radius: 4px;
-    max-width: 300px;
-    font-size: 16px;
-    padding: 10px 15px;
-    margin: 0;
-    border: 0;
-    background-color: $color-grey--dark;
-    box-shadow: 0 2px 9.8px .2px rgba(0,0,0,.5),inset 0 1px 3px -2px #fff;
-    color: #fff;*/ }
+    font-size: 14px; }
     @media (max-width: 767px) {
       .call-me-now .advert {
         border-radius: 50%;
@@ -8581,7 +8585,15 @@ body.modal-open {
     overflow: hidden;
     z-index: 1000;
     border-radius: 4px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    /*input {
+      height: 45px;
+      font-size: 15px;
+      border: 1px solid #ededed;
+      border-radius: 4px;
+      padding: 10px 10px 0;
+      color: #939393;
+    }*/ }
     .call-me-now .call-me-form header {
       background-color: #3b3b3b;
       color: #fff;
@@ -8602,13 +8614,6 @@ body.modal-open {
         display: inline-block; }
     .call-me-now .call-me-form form {
       padding: 0 20px 20px; }
-    .call-me-now .call-me-form input {
-      height: 45px;
-      font-size: 15px;
-      border: 1px solid #ededed;
-      border-radius: 4px;
-      padding: 10px 10px 0;
-      color: #939393; }
     .call-me-now .call-me-form button {
       font-size: 14px; }
     .call-me-now .call-me-form .contact-zone {
@@ -8861,78 +8866,168 @@ a, .link-like {
 .button-square {
   border-radius: 2px; }
 
+/*
 .input-block {
   position: relative;
-  color: #939393;
-  margin: 30px 0 15px; }
-  .input-block.dirty label {
-    /*top: -18px;
-      font-size: 13px;*/
-    top: 2px;
-    font-size: 11px; }
-  .input-block.disabled {
-    color: #cdcdcd; }
-    .input-block.disabled label {
-      color: #cdcdcd; }
-    .input-block.disabled input, .input-block.disabled textarea {
-      color: #cdcdcd;
-      border-bottom: 1px solid #e5e5e5; }
-    .input-block.disabled ::-webkit-input-placeholder {
-      color: #cdcdcd; }
-    .input-block.disabled ::-moz-placeholder {
-      color: #cdcdcd; }
-    .input-block.disabled :-ms-input-placeholder {
-      color: #cdcdcd; }
-    .input-block.disabled ::placeholder {
-      color: #cdcdcd; }
-  .input-block.has-error label:after {
-    color: #fc4a64; }
-  .input-block.has-error .input-info, .input-block.has-error .input-info p {
-    height: auto;
-    opacity: 1; }
-  .input-block label {
+  color: $color-grey;
+  margin: 30px 0 15px;
+  &.dirty {
+    label {
+      !*top: -18px;
+      font-size: 13px;*!
+      top: 2px;
+      font-size: 11px;
+    }
+  }
+  &.disabled {
+    color: rgb(205, 205, 205);
+    label {
+      color: rgb(205, 205, 205);
+    }
+    input, textarea {
+      color: rgb(205, 205, 205);
+      border-bottom: 1px solid rgb(229, 229, 229);
+    }
+    ::placeholder {
+      color: rgb(205, 205, 205);
+    }
+  }
+  &.has-error {
+    label:after {
+      color: $color-red;
+    }
+    input, textarea {
+      //border-bottom: 1px solid $color-red;
+      //box-shadow: 0 1px $color-red;
+    }
+    .input-info, .input-info p {
+      height: auto;
+      opacity: 1;
+    }
+  }
+  label {
     font-weight: 300;
     font-family: "Roboto";
-    color: #939393;
+    //letter-spacing: .1rem;
+    color: $color-grey;
     margin-bottom: 0;
     position: absolute;
     top: 5px;
     left: 10px;
+    @include transition(all .4s cubic-bezier(.25,.8,.25,1));
+    &:after {
+      content: '*';
+      vertical-align: top;
+      margin-left: .2rem;
+      font-size: 13px;
+    }
+    &.placeholder {
+      top: -18px;
+      font-size: 13px;
+    }
+  }
+  input, textarea {
+    color: $color-grey--dark;
+    width: 100%;
+    //border: none;
+    //border-bottom: 1px solid rgb(204, 203, 203);
+    line-height: normal;
+    padding-bottom: 6px;
+    &:focus {
+      //border-bottom: 1px solid $color-green;
+      //box-shadow: 0 1px $color-green;
+      outline: none;
+    }
+  }
+  ::placeholder {
+    color: $color-grey;
+  }
+  .input-info {
+    transition: all .3s linear;
+    &, p {
+      height: 0;
+      opacity: 0;
+    }
+    p {
+      font-size: 12px;
+      margin: 8px 0 0;
+      color: $color-red;
+      display: block;
+      line-height: 18px;
+    }
+  }
+}
+*/
+.bb-input {
+  margin: 0 0 10px;
+  position: relative; }
+  .bb-input label {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    padding: 0 0 4px;
+    font-size: 16px;
+    margin: 0;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: none;
+    left: 10px;
+    color: #3b3b3b;
+    top: 16px;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
-    .input-block label:after {
+    .bb-input label:after {
       content: '*';
       vertical-align: top;
       margin-left: .2rem;
       font-size: 13px; }
-    .input-block label.placeholder {
+    .bb-input label.placeholder {
       top: -18px;
       font-size: 13px; }
-  .input-block input, .input-block textarea {
-    color: #3b3b3b;
+  .bb-input input, .bb-input textarea {
+    padding: 15px 10px 0;
+    min-height: 50px;
     width: 100%;
-    line-height: normal;
-    padding-bottom: 6px; }
-    .input-block input:focus, .input-block textarea:focus {
-      outline: none; }
-  .input-block ::-webkit-input-placeholder {
-    color: #939393; }
-  .input-block ::-moz-placeholder {
-    color: #939393; }
-  .input-block :-ms-input-placeholder {
-    color: #939393; }
-  .input-block ::placeholder {
-    color: #939393; }
-  .input-block .input-info {
-    transition: all .3s linear; }
-    .input-block .input-info, .input-block .input-info p {
-      height: 0;
-      opacity: 0; }
-    .input-block .input-info p {
-      font-size: 12px;
-      margin: 8px 0 0;
-      color: #fc4a64;
-      display: block;
-      line-height: 18px; }
+    color: #3b3b3b;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    outline: 0; }
+    .bb-input input.ng-valid, .bb-input textarea.ng-valid {
+      border-color: #46841e;
+      color: #46841e; }
+    .bb-input input.ng-not-empty.ng-invalid, .bb-input textarea.ng-not-empty.ng-invalid {
+      border-color: #fc4a64;
+      color: #fc4a64; }
+    .bb-input input:focus label, .bb-input textarea:focus label {
+      font-size: 11px;
+      top: 3px; }
+  .bb-input.dirty label {
+    font-size: 11px;
+    top: 3px; }
+  .bb-input.has-error input, .bb-input.has-error textarea {
+    border-color: #fc4a64;
+    box-shadow: none; }
+  .bb-input .input-info p {
+    margin: 0 0 -6px; }
+  .bb-input__top0 {
+    margin-top: 0; }
+
+.bb-form__dark input, .bb-form__dark textarea {
+  border-color: #afafaf; }
+
+.bb-form-footer {
+  margin-top: 30px; }
+  .bb-form-footer a {
+    color: #fff;
+    text-decoration: underline; }
+  @media (max-width: 600px) {
+    .bb-form-footer button {
+      border-radius: 3px; } }
+
+.bb-form .form-alert {
+  color: #fc4a64;
+  font-size: 12px;
+  position: relative; }
 
 .has-line {
   position: relative; }
@@ -8945,6 +9040,8 @@ a, .link-like {
     bottom: -10px;
     left: 50%;
     margin-left: -25px; }
+  .has-line__dark:after {
+    background: rgba(255, 255, 255, 0.4); }
 
 .divider-or {
   width: 100%;
