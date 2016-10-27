@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://europe-bloombees.appspot.com/static/img/favicon.ico">
+    <link rel="stylesheet" href="/dist/css/common.min.css">
+    <title>Text page template</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .display-full {
+            display: block;
+            border: 0;
+            height: calc(100vh - 55px);
+            width: 100%;
+        }
+        .template-switch {
+            height: 55px;
+            padding: 5px;
+            border-bottom: 3px solid #d00404;
+            background: rgba(46, 198, 198, 0.08);
+        }
+    </style>
+</head>
+<body ng-app="Bloombees" ng-controller="MainController as main" class="bg-white">
+    <div class="template-switch">
+        <a href="/"><button class="button button-action">Back</button></a>
+        <span>Select template</span>
+        <select id="templates">
+            <option value="/templates/text-page/">Text page</option>
+            <option value="/templates/landing-page/">Landing page</option>
+            <option value="/templates/grid-playground/" selected>Grid playground</option>
+        </select>
+    </div>
+    <div id="playground" class="display-full">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        Bee nice
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        Bee fighter
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        Bee strong
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        Bee happy
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                Bee nice
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                Bee fighter
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                Bee strong
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                Bee happy
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+    <script src="/dist/js/common.min.js"></script>
+    <script>
+        (function ($) {
+            var iframe = $('iframe');
+            $('#templates').on('change', function () {
+                iframe.attr('src', $(this).val());
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
