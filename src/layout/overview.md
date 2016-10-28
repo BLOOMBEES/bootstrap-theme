@@ -5,11 +5,11 @@ group: layout
 redirect_from: "/layout/"
 ---
 
-Bootstrap includes several components and options for laying out your project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
+Bloombees includes several components and options for laying out your project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
 
 ## Containers
 
-Containers are the most basic layout element in Bootstrap and are **required when using our grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
+Containers are the most basic layout element in Bloombees and are **required when using our grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
 
 While containers *can* be nested, most layouts do not require a nested container.
 
@@ -46,13 +46,13 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ## Responsive breakpoints
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Since Bloombees is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Bloombees primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 544px)
-// No media query since this is the default in Bootstrap
+// No media query since this is the default in Bloombees
 
 // Small devices (landscape phones, 544px and up)
 @media (min-width: 544px) { ... }
