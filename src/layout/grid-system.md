@@ -4,7 +4,7 @@ title: Grid system
 group: layout
 ---
 
-Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It's based on a 12 column layout and has multiple tiers, one for each [media query range]({{ site.baseurl }}/layout/overview/#responsive-breakpoints). You can use it with Sass mixins or our predefined classes.
+Bloombees includes Bootstrap's powerful mobile-first grid system for building layouts of all shapes and sizes. It's based on a 12 column layout and has multiple tiers, one for each [media query range]({{ site.baseurl }}/layout/overview/#responsive-breakpoints). You can use it with Sass mixins or our predefined classes.
 
 ## Contents
 
@@ -30,9 +30,9 @@ Sounds good? Great, let's move on to seeing all that in an example.
 
 ## Quick start example
 
-If you're using Bootstrap's compiled CSS, this the example you'll want to start with.
+If you're using Bloombees's compiled CSS, this the example you'll want to start with.
 
-{% example html %}
+{% highlight html %}
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -46,15 +46,15 @@ If you're using Bootstrap's compiled CSS, this the example you'll want to start 
     </div>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 The above example creates three equal-width columns on small, medium, large, and extra large devices using our [predefined grid classes](#predefined-classes). Those columns are centered in the page with the parent `.container`.
 
 ## Grid options
 
-While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+While Bloombees uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+See how aspects of the Bloombees grid system work across multiple devices with a handy table.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -131,7 +131,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
 
 ## Sass mixins
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our [predefined grid classes](#predefined-classes) use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+When using Bloombees's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our [predefined grid classes](#predefined-classes) use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
 
 ### Variables
 
@@ -268,7 +268,7 @@ See it in action in <a href="http://jsbin.com/ruxona/edit">this rendered example
 
 ## Predefined classes
 
-In addition to our semantic mixins, Bootstrap includes an extensive set of prebuilt classes for quickly creating grid columns. It includes options for device-based column sizing, reordering columns, and more.
+In addition to our semantic mixins, Bloombees includes an extensive set of prebuilt classes for quickly creating grid columns. It includes options for device-based column sizing, reordering columns, and more.
 
 ### Example: Stacked-to-horizontal
 

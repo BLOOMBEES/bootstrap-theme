@@ -2,6 +2,10 @@
   pages:
     - title: Fonts
     - title: Variables
+- title: Layout
+  pages:
+    - title: Overview
+    - title: Grid System
 - title: Components
   pages:
     - title: Buttons

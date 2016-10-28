@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://europe-bloombees.appspot.com/static/img/favicon.ico">
-    <link rel="stylesheet" href="/dist/css/common.min.css">
-    <title>Text page template</title>
-    <style>
-        body {
-            margin: 0;
-        }
-        .example {
-            margin: 30px auto;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            background: #f9f9fb;
-            border-radius: 3px;
-        }
-        .display-full {
-            display: block;
-            border: 0;
-            height: calc(100vh - 55px);
-            width: 100%;
-        }
-        .template-switch {
-            height: 55px;
-            padding: 5px;
-            border-bottom: 3px solid #d00404;
-            background: rgba(46, 198, 198, 0.08);
-        }
-    </style>
-</head>
-<body ng-app="Bloombees" ng-controller="MainController as main" class="bg-white">
+---
+layout: templates
+title: Text Page
+group: templates
+---
 
-    <div id="playground" class="display-full">
+<div id="playground" class="display-full">
         <section class="example">
             <div class="container">
                 <div class="row">
@@ -78,18 +49,4 @@
                 Bee cool
             </div>
         </section>
-        <section class="example">test</section>
-        <section class="example">222</section>
-        <section class="example"></section>
     </div>
-    <script src="/dist/js/common.min.js"></script>
-    <script>
-        (function ($) {
-            var iframe = $('iframe');
-            $('#templates').on('change', function () {
-                iframe.attr('src', $(this).val());
-            });
-        })(jQuery);
-    </script>
-</body>
-</html>
