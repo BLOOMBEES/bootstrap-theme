@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Headers
-group: components
+group: components-css
 ---
 
 {% example html %}

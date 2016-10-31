@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: Buttons
-group: components
-redirect_from: "/components/"
+group: components-css
+redirect_from: "/components-css/"
 ---
 
 ## Buttons

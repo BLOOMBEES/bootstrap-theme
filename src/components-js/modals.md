@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modals
-group: components
+group: components-js
 ---
 
 ## Modal 

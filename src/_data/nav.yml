@@ -1,20 +1,20 @@
 - title: Common
   pages:
-    - title: Fonts
-    - title: Variables
-- title: Layout
-  pages:
     - title: Overview
     - title: Grid System
-- title: Components
+    - title: Fonts
+    - title: Variables
+- title: Components CSS
   pages:
     - title: Buttons
     - title: Icons
-    - title: Input
+    - title: Inputs
+    - title: Headers
+- title: Components JS
+  pages:
+    - title: Tabs
     - title: Tooltips
     - title: Modals
-    - title: Headers
-    - title: Tabs
 - title: Templates
   pages:
     - title: Text page

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Icons
-group: components
+group: components-css
 ---
 
 ## Icons

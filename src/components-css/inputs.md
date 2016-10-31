@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Input
-group: components
+title: Inputs
+group: components-css
 ---
 
 ## Custom input structure

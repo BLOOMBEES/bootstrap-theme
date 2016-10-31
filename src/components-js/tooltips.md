@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips
-group: components
+group: components-js
 ---
 
 ## Small tooltip
