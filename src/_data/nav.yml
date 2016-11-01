@@ -4,6 +4,7 @@
     - title: Grid System
     - title: Fonts
     - title: Variables
+    - title: Helpers
 - title: Components CSS
   pages:
     - title: Buttons
@@ -15,6 +16,8 @@
     - title: Tabs
     - title: Tooltips
     - title: Modals
+    - title: Sticky
+    - title: ScrollTo
 - title: Templates
   pages:
     - title: Text page

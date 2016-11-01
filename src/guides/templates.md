@@ -6,13 +6,16 @@ group: guides
 
 `templates` folder structure:
 
-{% highlight text %}
-    |--layout
-        base.htm.twig
-    |--partials
-    index.htm.twig
-    pageName.htm.twig
-    ...
+{% highlight plaintext %}
+    templates/
+    ├── layout/
+    │   └── base.htm.twig
+    ├── partial/
+    │   ├── partialName.htm.twig
+    │   └── ...
+    ├── index.htm.twig
+    ├── pageName.htm.twig
+    └── ...
 {% endhighlight %}
 
 Each public page has it's own template file `pageName.htm.twig`. <br/>
