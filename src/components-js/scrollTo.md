@@ -4,16 +4,15 @@ title: ScrollTo
 group: components-js
 ---
 
-{% example js %}
-<div class="test-container sticky-container" style="position: relative;overflow: hidden; overflow-y: scroll; background: white;">
-    <div class="test-item">Sample</div>
-    <div class="test-item">Sample</div>
-    <div class="test-item"><a href="#test">Link</a></div>
+{% example html %}
+<div class="test-container" id="test-top">
+    <div class="test-nav" sticky>Top Navigation</div>
+    <div class="test-item" smooth-scroll><a href="#test">Click to see smooth scroll</a></div>
     <div class="test-item">Sample</div>
     <div class="test-item">Sample</div>
     <div class="test-item">Sample</div>
     <div class="test-item">Sample</div>
     <div class="test-item" id="test">Target element</div>
-    <div class="test-item">Sample</div>
+    <div class="test-item"><a href="#test-top">To top without animation</a></div>
 </div>
-{% endexample js %}
+{% endexample %}
