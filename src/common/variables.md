@@ -7,6 +7,7 @@ group: common
 ## Colors
 
 ### Color variable names in the common.scss file
+
 <hr>
 	$color-green: #2ec6c6; //Links, highlights texts, main CTAs...
 	$color-red: #fc4a64; //Errors
@@ -19,7 +20,7 @@ group: common
 <hr>
 
 {% example html %}
-        <section class="test text-center">
+        <section class="text-center">
             <div class="row mt-20 mb-20">
                 <div class="color-example-wrap col-sm-4">
                     <div class="color-example color-green"></div>

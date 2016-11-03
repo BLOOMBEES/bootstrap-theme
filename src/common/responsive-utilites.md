@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Responsive utilities
-group: layout
+title: Responsive Utilities
+group: common
 ---
 
 For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.
@@ -108,8 +108,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
         </tbody>
     </table>
 </div>	
-	
-	
+		
 	
 <h2 id="responsive-utilities-print">Print classes</h2>
 <p>Similar to the regular responsive classes, use these for toggling content for print.</p>
@@ -147,6 +146,8 @@ Try to use these on a limited basis and avoid creating entirely different versio
   </table>
 </div>
 
+The class `.visible-print` also exists but it is approximately equivalent to `.visible-print-block`, except with additional special cases for `<table>`-related elements.
+
 ## Test cases
 
 Resize your browser or load on different devices to test the responsive utility classes.
@@ -157,77 +158,77 @@ Green checkmarks indicate the element **is visible** in your current viewport.
     
 <div class="row responsive-utilities-test visible-on">
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-xs">Extra small</span> <span class="visible-xs-block">✔ Visible on x-small</span>
+        <span class="hidden-xs">Extra small</span> <span class="visible-xs-block is-visible">✔ Visible on x-small</span>
     </div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-sm">Small</span> <span class="visible-sm-block">✔ Visible on small</span>
+        <span class="hidden-sm">Small</span> <span class="visible-sm-block is-visible">✔ Visible on small</span>
     </div>
     <div class="clearfix visible-xs-block"></div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-md">Medium</span> <span class="visible-md-block">✔ Visible on medium</span>
+        <span class="hidden-md">Medium</span> <span class="visible-md-block is-visible">✔ Visible on medium</span>
     </div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-lg">Large</span> <span class="visible-lg-block">✔ Visible on large</span>
+        <span class="hidden-lg">Large</span> <span class="visible-lg-block is-visible">✔ Visible on large</span>
     </div>
 </div>
 <div class="row responsive-utilities-test visible-on">
     <div class="col-xs-6">
-        <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block">✔ Visible on x-small and small</span>
+        <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block is-visible">✔ Visible on x-small and small</span>
     </div>
     <div class="col-xs-6">
-        <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block">✔ Visible on medium and large</span>
-    </div>
-    <div class="clearfix visible-xs-block"></div>
-    <div class="col-xs-6">
-        <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block">✔ Visible on x-small and medium</span>
-    </div>
-    <div class="col-xs-6">
-        <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block">✔ Visible on small and large</span>
+        <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block is-visible">✔ Visible on medium and large</span>
     </div>
     <div class="clearfix visible-xs-block"></div>
     <div class="col-xs-6">
-        <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block">✔ Visible on x-small and large</span>
+        <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block is-visible">✔ Visible on x-small and medium</span>
     </div>
     <div class="col-xs-6">
-        <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block">✔ Visible on small and medium</span>
+        <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block is-visible">✔ Visible on small and large</span>
+    </div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6">
+        <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block is-visible">✔ Visible on x-small and large</span>
+    </div>
+    <div class="col-xs-6">
+        <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block is-visible">✔ Visible on small and medium</span>
     </div>
 </div>
 <h3 id="hidden-on"><a aria-label="Anchor link for: hidden on" class="anchorjs-link" data-anchorjs-icon="" href="#hidden-on" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Hidden on...</h3>
 <p>Here, green checkmarks also indicate the element <strong>is hidden</strong> in your current viewport.</p>
 <div class="row responsive-utilities-test hidden-on">
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-xs">Extra small</span> <span class="visible-xs-block">✔ Hidden on x-small</span>
+        <span class="hidden-xs">Extra small</span> <span class="visible-xs-block is-visible">✔ Hidden on x-small</span>
     </div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-sm">Small</span> <span class="visible-sm-block">✔ Hidden on small</span>
+        <span class="hidden-sm">Small</span> <span class="visible-sm-block is-visible">✔ Hidden on small</span>
     </div>
     <div class="clearfix visible-xs-block"></div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-md">Medium</span> <span class="visible-md-block">✔ Hidden on medium</span>
+        <span class="hidden-md">Medium</span> <span class="visible-md-block is-visible">✔ Hidden on medium</span>
     </div>
     <div class="col-xs-6 col-sm-3">
-        <span class="hidden-lg">Large</span> <span class="visible-lg-block">✔ Hidden on large</span>
+        <span class="hidden-lg">Large</span> <span class="visible-lg-block is-visible">✔ Hidden on large</span>
     </div>
 </div>
 <div class="row responsive-utilities-test hidden-on">
     <div class="col-xs-6">
-        <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block">✔ Hidden on x-small and small</span>
+        <span class="hidden-xs hidden-sm">Extra small and small</span> <span class="visible-xs-block visible-sm-block is-visible">✔ Hidden on x-small and small</span>
     </div>
     <div class="col-xs-6">
-        <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block">✔ Hidden on medium and large</span>
-    </div>
-    <div class="clearfix visible-xs-block"></div>
-    <div class="col-xs-6">
-        <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block">✔ Hidden on x-small and medium</span>
-    </div>
-    <div class="col-xs-6">
-        <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block">✔ Hidden on small and large</span>
+        <span class="hidden-md hidden-lg">Medium and large</span> <span class="visible-md-block visible-lg-block is-visible">✔ Hidden on medium and large</span>
     </div>
     <div class="clearfix visible-xs-block"></div>
     <div class="col-xs-6">
-        <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block">✔ Hidden on x-small and large</span>
+        <span class="hidden-xs hidden-md">Extra small and medium</span> <span class="visible-xs-block visible-md-block is-visible">✔ Hidden on x-small and medium</span>
     </div>
     <div class="col-xs-6">
-        <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block">✔ Hidden on small and medium</span>
+        <span class="hidden-sm hidden-lg">Small and large</span> <span class="visible-sm-block visible-lg-block is-visible">✔ Hidden on small and large</span>
+    </div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6">
+        <span class="hidden-xs hidden-lg">Extra small and large</span> <span class="visible-xs-block visible-lg-block is-visible">✔ Hidden on x-small and large</span>
+    </div>
+    <div class="col-xs-6">
+        <span class="hidden-sm hidden-md">Small and medium</span> <span class="visible-sm-block visible-md-block is-visible">✔ Hidden on small and medium</span>
     </div>
 </div>

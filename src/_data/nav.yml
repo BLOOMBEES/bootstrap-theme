@@ -5,6 +5,7 @@
     - title: Fonts
     - title: Variables
     - title: Helpers
+    - title: Responsive Utilites
 - title: Components CSS
   pages:
     - title: Buttons
@@ -18,7 +19,7 @@
     - title: Tooltips
     - title: Modals
     - title: Sticky
-    - title: ScrollTo
+    - title: SmoothScroll
 - title: Templates
   pages:
     - title: Text page

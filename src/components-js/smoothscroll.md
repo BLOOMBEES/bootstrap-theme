@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: ScrollTo
+title: SmoothScroll
 group: components-js
 ---
 

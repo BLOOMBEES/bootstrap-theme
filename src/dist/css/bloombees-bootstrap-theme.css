@@ -125,6 +125,24 @@ th {
 .highlight {
   margin-top: 15px; }
 
+strong {
+  font-weight: 500 !important; }
+
+.is-visible {
+  background-color: rgba(70, 132, 30, 0.15);
+  color: #46841e; }
+
+.responsive-utilities-test span {
+  display: block;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #dadada; }
+
 .test-container {
   width: 100%;
   position: relative;
