@@ -35,8 +35,9 @@ One of them:
 | `cols`        | *(Integer)* | 1       | Columns number of the form |
 | `removeTop`   | *(Bool)*    | false   | If _true_ removes margin between inputs |
 | `reset`       | *(Bool)*    | false   | Add reset button to the form |
+| `back`        | *(Bool)*    | false   | Add back button to the form (used in forgot password form) |
 | `submit`      | *(String)*  | "Send"  | You can override text of submit button |
-| `theme`       | *(String)*  | "light" | Available themes: "dark" |
+| `theme`       | *(String)*  | "light" | Available themes: "dark", "line" |
 {: class="table table-bordered table-hover"}
 
 #### _Input_ object params

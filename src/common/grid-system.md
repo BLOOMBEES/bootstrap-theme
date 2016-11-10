@@ -62,23 +62,23 @@ See how aspects of the Bloombees grid system work across multiple devices with a
       <tr>
         <th></th>
         <th class="text-xs-center">
+          Extra extra small<br>
+          <small>&lt;480px</small>
+        </th>
+        <th class="text-xs-center">
           Extra small<br>
-          <small>&lt;544px</small>
+          <small>&lt;768px</small>
         </th>
         <th class="text-xs-center">
           Small<br>
-          <small>&ge;544px</small>
-        </th>
-        <th class="text-xs-center">
-          Medium<br>
           <small>&ge;768px</small>
         </th>
         <th class="text-xs-center">
-          Large<br>
+          Medium<br>
           <small>&ge;992px</small>
         </th>
         <th class="text-xs-center">
-          Extra large<br>
+          Large<br>
           <small>&ge;1200px</small>
         </th>
       </tr>
@@ -92,18 +92,18 @@ See how aspects of the Bloombees grid system work across multiple devices with a
       <tr>
         <th class="text-nowrap" scope="row">Container width</th>
         <td>None (auto)</td>
-        <td>576px</td>
+        <td>None (auto)</td>
         <td>720px</td>
         <td>940px</td>
         <td>1140px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
+        <td><code>.col-xxs-</code></td>
         <td><code>.col-xs-</code></td>
         <td><code>.col-sm-</code></td>
         <td><code>.col-md-</code></td>
         <td><code>.col-lg-</code></td>
-        <td><code>.col-xl-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
@@ -132,35 +132,6 @@ See how aspects of the Bloombees grid system work across multiple devices with a
 ## Sass mixins
 
 When using Bloombees's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our [predefined grid classes](#predefined-classes) use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
-
-### Variables
-
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
-
-{% highlight scss %}
-$grid-columns:      12;
-$grid-gutter-width: 30px;
-
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 544px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-);
-
-$container-max-widths: (
-  sm: 576px,
-  md: 720px,
-  lg: 940px,
-  xl: 1140px
-);
-{% endhighlight %}
 
 ### Mixins
 
