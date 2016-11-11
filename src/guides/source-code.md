@@ -103,20 +103,22 @@ Folder `src/sass` structure:
 #### Add external plugin for one page
 
 1. Put source files into folder `src/sass/lib/pluginName/`
-1. Import them into page style file using `@import` directive.
+1. If plugin's styles are in `*.scss`, then import them into page's style file using `@import` directive.
+3. If plugin's styles are in `*.css`, then add them into template file adding `{%raw%}{% set libs_css = ['magnific-popup.css'] %}{%endraw%}`
 
 Example:
+{:class="underline"}
 
 We need to import plugin styles into Press Room page. So we are including into `src/sass/pages/press-room.scss` this code:
 
 ~~~ css
-@import "../lib/owl-carousel/owl.carousel";
+@import "lib/owl-carousel/owl.carousel";
 ~~~
 
-or `*.css`
+or in file `templates/press-room.htm.twig`
 
-~~~ css
-@import "../lib/owl-carousel/magnific-popup.css";
+~~~ twig
+{%raw%}{% set libs_css = ['magnific-popup.css'] %}{%endraw%}
 ~~~
 
 ### Add new images
