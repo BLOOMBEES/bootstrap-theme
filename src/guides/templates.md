@@ -48,3 +48,4 @@ Some explanations to TWIG variables, that you can use to customize templates:
 | `custom_js`   | *(String)* | custom JS file name (with root in /static/js) |
 | `libs_css`    | *(Array)*  | Additional CSS plugins, added to the page |
 | `libs_js`     | *(Array)*  | Additional JS plugins, added to the page |
+{:class="table table-bordered table-hover"}

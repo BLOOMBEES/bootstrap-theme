@@ -23,6 +23,7 @@ One of them:
  
 
 | Parameter | Type       | Description |
+|-----------|------------|-------------|
 | `name`    | *(String)* | Value of `name` and `id` attributes of the form |
 | `fields`  | *(Array)*  | Array of _input objects_ for the form |
 | `options` | *(Object)* | You can customize your form with options: |
@@ -31,6 +32,7 @@ One of them:
 #### _Options_ object params
 
 | Parameter     | Type        | Default | Description |
+|---------------|-------------|---------|-------------|
 | `acceptTerms` | *(Bool)*    | false   | If _true_ form will have checkbox with terms and conditions agreement|
 | `cols`        | *(Integer)* | 1       | Columns number of the form |
 | `removeTop`   | *(Bool)*    | false   | If _true_ removes margin between inputs |
@@ -42,10 +44,12 @@ One of them:
 
 #### _Input_ object params
 
-| Parameter  | Type       | Default | Description |
-| `label`    | *(String)* | ""      | Value of `<label></label>` tag for the input|
-| `name`     | *(String)* | ""      | Value of `name` attribute of the input |
-| `required` | *(Bool)*   | false   | If _true_ makes input required |
+| Parameter  | Type        | Default | Description |
+|------------|-------------|---------|-------------|
+| `col`      | *(Integer)* | 0       | Splits inputs with this param to columns |
+| `label`    | *(String)*  | ""      | Value of `<label></label>` tag for the input|
+| `name`     | *(String)*  | ""      | Value of `name` attribute of the input |
+| `required` | *(Bool)*    | false   | If _true_ makes input required |
 {: class="table table-bordered table-hover"}
 
 ---

@@ -101,6 +101,7 @@ Folder `src/sass` structure:
 {:class="table table-hover table-bordered table-responsive"}
 
 #### Add external plugin for one page
+{:class="underline"}
 
 1. Put source files into folder `src/sass/lib/pluginName/`
 1. If plugin's styles are in `*.scss`, then import them into page's style file using `@import` directive.
