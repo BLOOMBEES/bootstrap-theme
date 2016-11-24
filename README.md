@@ -12,6 +12,8 @@ Then you start Jekyll locally, at the same time it compile files to /docs folder
 
     bundle exec jekyll serve
     
+[Quick referense](http://kramdown.gettalong.org/quickref.html) for kramdown markup (used in Jekyll). 
+
 ## Deployment
 
 You'll deploy documentation to Google App using the following command:
