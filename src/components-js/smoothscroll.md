@@ -4,6 +4,23 @@ title: SmoothScroll
 group: components-js
 ---
 
+### Overview
+
+To get your links scroll to the anchor ID, you can just add `smooth-scroll` attribute to the container of the link(-s). You can set scroll duration by adding `scroll-duration="3000"` attribute, which means that scrolling will last 3000ms.  
+
+---
+
+### Parameters
+
+| Parameter         | Default  | Description |
+|:------------------|:---------|:-------------|
+| `scroll-duration` | 1500     | Duration of the scrolling in ms|
+{:class="table table-hover table-bordered"}
+
+---
+
+### Example
+
 {% example html %}
 <div class="test-container" id="test-top">
     <div class="test-nav" sticky>Top Navigation</div>

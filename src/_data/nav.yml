@@ -15,11 +15,13 @@
     - title: Tables
 - title: Components JS
   pages:
+    - title: Inview
+    - title: Modals
+    - title: Popup
+    - title: SmoothScroll
+    - title: Sticky
     - title: Tabs
     - title: Tooltips
-    - title: Modals
-    - title: Sticky
-    - title: SmoothScroll
 - title: Templates
   pages:
     - title: Text page

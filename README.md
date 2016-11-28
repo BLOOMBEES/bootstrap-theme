@@ -12,7 +12,7 @@ Then you start Jekyll locally, at the same time it compile files to /docs folder
 
     bundle exec jekyll serve
     
-[Quick referense](http://kramdown.gettalong.org/quickref.html) for kramdown markup (used in Jekyll). 
+[Quick reference](http://kramdown.gettalong.org/quickref.html) for kramdown markup (used in Jekyll). 
 
 ## Deployment
 
