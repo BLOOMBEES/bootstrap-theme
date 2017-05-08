@@ -8,6 +8,10 @@ You'll first need to install Jekyll, as it is used as templating engine
     ~ $ jekyll new my-awesome-site
     ~ $ cd my-awesome-site
 
+Then install bundled dependencies
+
+    bundle install
+
 Then you start Jekyll locally, at the same time it compile files to /docs folder
 
     bundle exec jekyll serve
