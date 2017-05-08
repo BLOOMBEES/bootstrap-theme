@@ -24,12 +24,50 @@ There are some caveats regarding using modals on mobile devices. See our browser
 <hr>
 **Due to how HTML5 defines its semantics, the autofocus HTML attribute has no effect in Bootstrap modals.** To achieve the same effect, use some custom JavaScript:
 
-	$('#myModal').on('shown.bs.modal', function () {
-	  $('#myInput').focus()
-	})
+{% example js %}
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+{% endexample %}
 <hr>
 
 ## Examples
+
+### Minimum markup
+
+Your modal template skeleton:
+
+{% example html %}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="icon bb-icon-close"></i>
+            </button>
+        </div>
+        <div class="modal-content">
+            Your content here!
+        </div>
+        <div class="modal-footer">
+            Control buttons
+        </div>
+    </div>
+</div>
+{% endexample %}
+
+To close modal add:
+
+{% example html %}
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <i class="icon bb-icon-close"></i>
+</button>
+{% endexample %}
+
+To initialize modal use javascript:
+
+{% example js %}
+    $('#loginModal1').modal('show');
+{% endexample %}
 
 ### Default example
 
@@ -37,6 +75,7 @@ A rendered modal with header, body, and set of actions in the footer.
 
 {% example html %}
 <button class="button button-main mb-20" onclick="$('#myModal1').modal('show');">Show Modal</button>
+
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -50,7 +89,7 @@ A rendered modal with header, body, and set of actions in the footer.
                     nam nesciunt voluptatibus voluptatum? Aliquid architecto fuga id nam necessitatibus odio officiis,
                     placeat quasi sapiente totam!</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer text-center">
                 <button type="button" class="button button-second" data-dismiss="modal">Close</button>
                 <button type="button" class="button button-main">Save changes</button>
             </div>

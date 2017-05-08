@@ -2,6 +2,7 @@
   pages:
     - title: Overview
     - title: Grid System
+    - title: Flex grid
     - title: Fonts
     - title: Variables
     - title: Helpers
