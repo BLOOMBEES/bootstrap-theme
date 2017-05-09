@@ -61,15 +61,28 @@ You can quickly add some properties with nifty shorthanded classes.
 
 ### Colors
 
-| Class             | Description |
-|-------------------|-------------|
-| `.bg-white`           | Add `background-color: #fff` |
-| `.bg-red`           | Add `background-color: #fc4a64` |
-| `.bg-green`           | Add `background-color: #2ec6c6` |
-| `.bg-green-dark`           | Add `background-color: #002626` |
-| `.color-white`           | Add `color: #fff` |
-| `.color-green`           | Add `color: #2ec6c6` |
-| `.color-red`           | Add `color: #fc4a64` |
+| Class                       | Description |
+|-----------------------------|-------------|
+| `.bg-white`                 | Add `background-color: #FFF` |
+| `.bg-transparent`           | Add `background-color: transparent` |
+| `.bg-red`                   | Add `background-color: #FC4A64` |
+| `.bg-green`                 | Add `background-color: #2EC6C6` |
+| `.bg-green-dark`            | Add `background-color: #002626` |
+| `.bg-discover`              | Add `background-color: #F9F9FB` |
+| `.bg-merchant`              | Add `background-color: #002626` |
+| `.bg-promoter`              | Add `background-color: #144848` |
+| `.bg-buyer`                 | Add `background-color: #134B54` |
+| `.color-white`              | Add `color: #FFF` |
+| `.color-green`              | Add `color: #2EC6C6` |
+| `.color-red`                | Add `color: #FC4A64` |
+| `.color-orange`             | Add `color: #FD9127` |
+| `.color-private-success`    | Add `color: #80C754` |
+| `.color-dark`               | Add `color: #002626` |
+| `.color-grey`               | Add `color: #939393` |
+| `.color-grey-private`       | Add `color: #A6A6A6` |
+| `.color-private-filter`     | Add `color: #939393` |
+| `.color-discover-font`      | Add `color: #494949` |
+| `.color-discover-font-dark` | Add `color: #3B3B3B` |
 {:class="table table-condenced table-hover table-bordered"}
 
 {% example html %}
@@ -78,13 +91,31 @@ You can quickly add some properties with nifty shorthanded classes.
 <div class="bg-red color-white col-md-4">Text test</div>
 {% endexample html %}
 
+### Font-family
+
+| Class         | Description |
+|---------------|-------------|
+| `.ff-regular` | Add font-family `roboto_regular, sans-serif` |
+| `.ff-light`   | Add font-family `roboto_light, sans-serif` |
+{:class="table table-condenced table-hover table-bordered"}
+
+{% example html %}
+<span class="ff-regular">font-family Roboto Regular</span>, 
+<span class="ff-light">font-family Roboto Light</span>
+{% endexample html %}
+
 ### Font-size
 
-`*` - integer values from 12 to 90
+`*` - integer values from 8 to 90
 
-| Class             | Description |
-|-------------------|-------------|
-| `.fs-*`           | Add font-size with value of `* px` |
+| Class                  | Description |
+|------------------------|-------------|
+| `.fs-*`                | Add font-size with value of `* px` |
+| `.fs-xx-*`, `fx-xxs-*` | Add font-size with value of `* px` for viewport < 480px |
+| `.fs-xs-*`             | Add font-size with value of `* px` for viewport < 768px |
+| `.fs-sm-*`             | Add font-size with value of `* px` for viewport 768 - 991px |
+| `.fs-md-*`             | Add font-size with value of `* px` for viewport < 1200px |
+| `.fs-lg-*`             | Add font-size with value of `* px` for viewport >= 1200px |
 {:class="table table-condenced table-hover table-bordered"}
 
 {% example html %}
@@ -95,11 +126,12 @@ You can quickly add some properties with nifty shorthanded classes.
 
 ### Line-height
 
-`*` - integer values from 10 to 20
+`*` - integer values from 1 to 20
 
-| Class             | Description |
-|-------------------|-------------|
-| `.lh-*`           | Add line-height with value of `*/10 px` |
+| Class                  | Description |
+|------------------------|-------------|
+| `.lh-*`                | Add line-height with value of `*/10 px` |
+| `.lh-xx-*`, `lh-xxs-*` | Add line-height with value of `*/10 px` for viewport < 480px |
 {:class="table table-condenced table-hover table-bordered"}
 
 {% example html %}
@@ -107,3 +139,13 @@ You can quickly add some properties with nifty shorthanded classes.
 <div class="bg-green-dark color-white col-md-4 lh-14">line-height:1.4</div> 
 <div class="bg-green-dark color-white col-md-4 lh-19">line-height:1.9</div>
 {% endexample html %}
+
+### Sizing
+
+| Class                  | Description |
+|------------------------|-------------|
+| `.minw-*`    | Add `min-width` with value of `5..750` (multiple of 5) |
+| `.maxw-*` | Add `max-width` with value of `5..750` (multiple of 5) |
+| `.height-*` | Add `height` with value of `2..400` (multiple of 2) |
+| `.hsize-*` | Add `min-height` with value of `10..600` (multiple of 10) |
+{:class="table table-condenced table-hover table-bordered"}
