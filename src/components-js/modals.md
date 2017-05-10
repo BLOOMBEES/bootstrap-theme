@@ -101,10 +101,10 @@ A rendered modal with header, body, and set of actions in the footer.
 
 ---
 
-### Sign in modal example
+## Sign in modal example
 
 {% example html %}
-<button class="button button-action" onclick="$('#loginModal').modal('show')">Sing in</button>
+<button class="button button-main" onclick="$('#loginModal').modal('show')">Sing in</button>
 
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -253,6 +253,111 @@ A rendered modal with header, body, and set of actions in the footer.
 </div>
 {% endexample %}
 
+## Share and earn modal example
+
+{% example html %}
+<button class="button button-main" onclick="$('#testModal').modal('show')">Share & earn</button>
+
+<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="login-modal-container">
+            <section class="bg-green share-vote bottom-triangle plr-30 ptb-30" id="ngdialog2-aria-describedby">
+                <div ng-hide="$ctrl.voted">
+                    <h3 class="fs-24 mtb-0 lh-12 lh-xx-10 ff-regular color-white" id="ngdialog2-aria-labelledby" tabindex="-1" style="outline: 0px;">Promoting <span ng-bind="ngDialogData.product.Product_name" class="ng-binding">baby music lover</span></h3>
+                    <p class="fs-16 fs-xx-12 lh-12">Sold by <span ng-bind="ngDialogData.product.Store_name" class="ng-binding">beeRacheltest0212b</span> <a ng-href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" target="_blank" href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341"><span class="icon-bb icon-link-straight color-white fs-20 va-middle"></span></a></p>
+                    <div class="fx fx-row fx-x-sb fx-y-center share-and-earn-vote">
+                        <div class="fx-40 prices-block fs-13 fs-xx-14">
+                            <div class="fx fx-x-sb lh-14">
+                                <span>Price</span>
+                                <div>
+                                    <span ng-bind="ngDialogData.currency" class="ng-binding">€</span>
+                                    <span ng-bind="$ctrl.renderPrice(ngDialogData.product.Product_price)" class="ng-binding">7.5</span>
+                                </div>
+                            </div>
+                            <div class="fx fx-x-sb lh-14 color-white">
+                                <span>You earn</span>
+                                <div>
+                                    <span ng-bind="ngDialogData.currency" class="ng-binding">€</span>
+                                    <span ng-bind="ngDialogData.commission" class="ng-binding">0.75</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vertical-line hidden-xxs"></div>
+                        <div class="voting-container">
+                            <vote-product ng-class="{'visible': ngDialogData.resolved}" class="fx fx-x-sb fx-y-center color-white fx-45 voting-block ng-isolate-scope visible" voted="$ctrl.voted" product="ngDialogData.product" style="">
+                                <button class="button button-vote button-vote-like icon-bb icon-like fs-20 fx-40" ng-class="{'voted': vote.product.Product_liked}" ng-click="vote.like()"></button>
+                                <button class="button button-vote button-vote-dislike icon-bb icon-dislike fs-20 fx-40" ng-class="{'voted': vote.product.Product_disliked}" ng-click="vote.dislike()"></button>
+                                <div class="fx fx-x-center fx-y-center color-white fs-16 icon-bb icon-help ng-isolate-scope" bb-tooltip="Voting helps Bloombees to evaluate the quality of promotable products." data-original-title="" title=""></div>    
+                            </vote-product>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="share-post-preview bg-white plr-30 ptb-30">
+                <span class="fs-12 color-private-filter mb-15">
+                    <p class="mb-0 lh-10">Post preview</p>
+                    <p class="mt-5 mb-10 lh-12">You can add your custom message depending on the network you select below</p>
+                </span>
+                <div class="post-preview-inner fx fx-x-sb">
+                    <div class="post-img fx-30" ng-style="{ backgroundImage: 'url(' + (ngDialogData.product.Product_imageUrl || ngDialogData.product.Product_pictures[0].Picture_td160x160Url) + ')' }" style="background-image: url(&quot;https://bloombees-googlestorage-7pxvh1vxhs.netdna-ssl.com/bloombees-public/upload2017/dev/stores/1957_beeracheltest0212b/products/228SJ/beeracheltest0212b-228SJ-baby_music_lover-td-16385.jpeg&quot;);"></div>
+                    <div class="post-desc fx-65">
+                        <p class="fs-16 fs-xx-12 lh-11 color-discover-font">
+                            <span ng-bind="ngDialogData.product.Store_uniqueId" class="ng-binding">beeracheltest0212b</span> | <span ng-bind="ngDialogData.product.Product_name" class="ng-binding">baby music lover</span>
+                        </p>
+                        <p class="fs-13 fs-xx-12 preview-description color-discover-font ng-binding" ng-bind="ngDialogData.product.Product_description">baby music lover</p>
+                        <p class="fs-13 fs-xx-12 lh-10">
+                            <a ng-href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" class="color-private-filter" target="_blank" href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">Bloombees.com</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center bg-white plr-30">
+                <p class="fs-16 fs-xx-14 color-discover-font">Make your choiсe...</p>
+                <div class="shared-networks pt-15 pb-50">
+                    <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
+                        <li class="facebook" socialshare="" socialshare-provider="facebook" socialshare-popup-width="500" socialshare-popup-height="500" ng-click="$ctrl.share('facebook')">
+                           <span class="icon bb-icon-facebook"></span>
+                        </li>
+                        <li class="twitter" socialshare="" socialshare-provider="twitter" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('twitter')">
+                            <span class="icon bb-icon-twitter"></span>
+                        </li>
+                        <li class="google" socialshare="" socialshare-provider="google" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('google')">
+                            <span class="icon bb-icon-google-plus"></span>
+                        </li>
+                        <li class="linkedin" socialshare="" socialshare-provider="linkedin" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('lingedin')">
+                            <span class="icon bb-icon-linkedin"></span>
+                        </li>
+                        <li class="pinterest hidden-xxs" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+                            <span class="icon bb-icon-pinterest"></span>
+                        </li>
+                        <li class="copy-link hidden-xxs" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+                            <span class="icon bb-icon-link"></span>
+                        </li>
+                        <li class="email hidden-xxs" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+                            <span class="icon bb-icon-email"></span>
+                        </li>
+                    </ul>
+                    <div class="visible-xxs">
+                        <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
+                            <li class="pinterest" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+                                <span class="icon bb-icon-pinterest"></span>
+                            </li>
+                            <li class="copy-link" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+                                <span class="icon bb-icon-link"></span>
+                            </li>
+                            <li class="email" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+                                <span class="icon bb-icon-email"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- ngIf: $ctrl.shared -->
+        </div>
+    </div>
+</div>
+{% endexample %}
+
 ---
 
 ### AngularJS modals
@@ -360,75 +465,4 @@ app.controller('DialogController', ['modalSrv', function(modalSrv) {
       plain: false
     });
 }]);
-```
-
-Let's take for example Share & Earn template code:
-
-```html
-<div class="login-modal-container">
-    <section class="bg-green share-vote bottom-triangle plr-30 ptb-30" id="ngdialog2-aria-describedby">
-        <div>
-            <h3 class="fs-24 mtb-0 lh-12 lh-xx-10 ff-regular color-white" id="ngdialog2-aria-labelledby" style="outline: 0px;" tabindex="-1">Promoting <span class="ng-binding">Chupetero+Mordedor</span></h3>
-            <p class="fs-16 fs-xx-12 lh-12">Sold by <span class="ng-binding">PetitSussete Cositas</span> <a href="https://bloombees.com/shopping/petitsussetecositas/23DYR?promoCode=9675" target="_blank"><span class="icon-bb icon-link-straight color-white fs-20 va-middle"></span></a></p>
-            <div class="fx fx-row fx-x-sb fx-y-center share-and-earn-vote">
-                <div class="fx-40 prices-block fs-13 fs-xx-14">
-                    <div class="fx fx-x-sb lh-14">
-                        <span>Price</span>
-                        <div>
-                            <span class="ng-binding">€</span> <span class="ng-binding">23</span>
-                        </div>
-                    </div>
-                    <div class="fx fx-x-sb lh-14 color-white">
-                        <span>You earn</span>
-                        <div>
-                            <span class="ng-binding">€</span> <span class="ng-binding">2.3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="vertical-line hidden-xxs"></div>
-                <div class="voting-container">
-                    <button class="button button-vote button-vote-like icon-bb icon-like fs-20 fx-40"></button> <button class="button button-vote button-vote-dislike icon-bb icon-dislike fs-20 fx-40"></button>
-                    <div class="fx fx-x-center fx-y-center color-white fs-16 icon-bb icon-help ng-isolate-scope" data-original-title="" title=""></div>
-                </div>
-            </div>
-        </div>
-        <div class="fx fx-x-center fx-y-center hsize-110 color-white ng-hide" style="">
-            Thank you for voting!
-        </div>
-    </section>
-    <section class="share-post-preview bg-white plr-30 ptb-30">
-        <span class="fs-12 color-private-filter mb-15"></span>
-        <p class="mb-0 lh-10"><span class="fs-12 color-private-filter mb-15">Post preview</span></p>
-        <p class="mt-5 mb-10 lh-12"><span class="fs-12 color-private-filter mb-15">You can add your custom message depending on the network you select below</span></p>
-        <div class="post-preview-inner fx fx-x-sb">
-            <div class="post-img fx-30" style="background-image: url(&quot;https://bloombees-googlestorage-7pxvh1vxhs.netdna-ssl.com/bloombees-public/upload2017/prod/stores/10710_petitsussetecositas/products/23DYR/petitsussetecositas-23DYR-chupetero_mordedor-td-5a5fcf116efddcf59ab13df9945e7f7f.jpeg&quot;);"></div>
-            <div class="post-desc fx-65">
-                <p class="fs-16 fs-xx-12 lh-11 color-discover-font"><span class="ng-binding">petitsussetecositas</span> | <span class="ng-binding">Chupetero+Mordedor</span></p>
-                <p class="fs-13 fs-xx-12 preview-description color-discover-font ng-binding"></p>
-                <p class="fs-13 fs-xx-12 lh-10"><a class="color-private-filter" href="https://bloombees.com/shopping/petitsussetecositas/23DYR?promoCode=9675" target="_blank">Bloombees.com</a></p>
-            </div>
-        </div>
-    </section>
-    <section class="text-center plr-30">
-        <p class="fs-16 fs-xx-14 color-discover-font">Make your choiсe...</p>
-        <div class="shared-networks pt-15 pb-50">
-            <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-                <li class="facebook"><span class="icon bb-icon-facebook"></span></li>
-                <li class="twitter"><span class="icon bb-icon-twitter"></span></li>
-                <li class="google"><span class="icon bb-icon-google-plus"></span></li>
-                <li class="linkedin"><span class="icon bb-icon-linkedin"></span></li>
-                <li class="pinterest hidden-xxs"><span class="icon bb-icon-pinterest"></span></li>
-                <li class="copy-link hidden-xxs"><span class="icon bb-icon-link"></span></li>
-                <li class="email hidden-xxs"><span class="icon bb-icon-email"></span></li>
-            </ul>
-            <div class="visible-xxs">
-                <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-                    <li class="pinterest"><span class="icon bb-icon-pinterest"></span></li>
-                    <li class="copy-link"><span class="icon bb-icon-link"></span></li>
-                    <li class="email"><span class="icon bb-icon-email"></span></li>
-                </ul>
-            </div>
-        </div>
-    </section><!-- ngIf: $ctrl.shared -->
-</div>
 ```
