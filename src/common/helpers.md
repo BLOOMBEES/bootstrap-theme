@@ -140,6 +140,22 @@ You can quickly add some properties with nifty shorthanded classes.
 <div class="bg-green-dark color-white col-md-4 lh-19">line-height:1.9</div>
 {% endexample html %}
 
+### Font-weight
+
+| Class           | Description           |
+|-----------------|-----------------------|
+| `.fw-thin`      | Add font-weight `100` |
+| `.fw-light`     | Add font-weight `300` |
+| `.fw-regular`   | Add font-weight `400` |
+| `.fw-medium`    | Add font-weight `500` |
+| `.fw-bold`      | Add font-weight `700` |
+{:class="table table-condenced table-hover table-bordered"}
+
+{% example html %}
+<span class="fw-regular fs-25">regular text</span> -  
+<span class="fw-bold fs-25">bold text</span>
+{% endexample html %}
+
 ### Sizing
 
 | Class                  | Description |
