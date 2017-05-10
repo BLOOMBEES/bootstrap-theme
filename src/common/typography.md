@@ -1,10 +1,40 @@
 ---
 layout: docs
-title: Fonts
+title: Typography
 group: common
 ---
 
-## Fonts
+## Default
+
+`<body>` comes with:
+
+```css
+body {
+    font-family: roboto_light,sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #002626;
+}
+```
+
+## Heading classes
+
+{% example html %}
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+{% endexample %}
+
+## Paragraph
+
+{% example html %}
+<p>Paragraph</p>
+{% endexample %}
+
+## Custom font styles
 
 {% example html %}
 <div class="title-modal">Modal title</div>
@@ -22,7 +52,6 @@ group: common
 <div class="text--dark">Text dark</div>
 <div class="text-small text--dark">Small text dark</div>
 {% endexample %}
-
 
 
 

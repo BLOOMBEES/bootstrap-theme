@@ -8,7 +8,7 @@ We have several types of tabs.
 
 ### Sliding tabs
 
-Used in sidebars and popups.
+Used in sidebars and popups. Implemented as jQuery extension. 
 
 Parameters should be added to the elements with `data-` prefix.
  
