@@ -119,6 +119,10 @@ Without angular markup HTML code will look like:
         </a>
     </section>
 </div>
+
+<script>
+$('bb-tabs-section').tabs();
+</script>
 {% endexample %}
 
 ### __Vertical tabs__
