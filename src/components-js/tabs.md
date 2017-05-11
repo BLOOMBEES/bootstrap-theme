@@ -91,41 +91,52 @@ It will fetch child routes of the `base-path` and generate tabs with routes.
 </div>
 {% endexample %}
 
-Without angular markup HTML code will look like:
+### Horizontal tabs with jQuery (classic)
+
+Here is an example:
 
 {% example html %}
-<div class="bg-green-dark">
-    <section class="bb-tabs-section">
-        <a class="tab">
+<div class="tabs-simple bg-green-dark" data-tabs="horizontal-tabs" data-tabs-theme="light">
+    <section class="bb-tabs-section" role="tablist">
+        <div class="tab" data-tab-open="Tab1" role="tab">
             <i class="tab-icon icon"></i>
-            <span class="tab-name"> Tab name
-            </span>
-            <span class="tab-detail"> Tab detaild
-            </span>
-        </a>
-        <a class="tab">
+            <span class="tab-name">Tab name 1</span>
+            <span class="tab-detail">Tab details</span>
+        </div>
+        <div class="tab" data-tab-open="Tab2" role="tab">
             <i class="tab-icon icon"></i>
-            <span class="tab-name"> Tab name
-            </span>
-            <span class="tab-detail"> Tab details
-            </span>
-        </a>
-        <a class="tab active">
+            <span class="tab-name">Tab name 2</span>
+            <span class="tab-detail">Tab details</span>
+        </div>
+        <div class="tab" data-tab-open="Tab3" role="tab">
             <i class="tab-icon icon"></i>
-            <span class="tab-name"> Tab name
-            </span>
-            <span class="tab-detail"> Tab details
-            </span>
-        </a>
+            <span class="tab-name">Tab name 3</span>
+            <span class="tab-detail">Tab details</span>
+        </div>
     </section>
+    <div class="content-section">
+        <div class="tab-content color-white" data-tab-name="Tab1" role="tabpanel">
+            Tab1
+        </div>
+        <div class="tab-content color-white" data-tab-name="Tab2" role="tabpanel">
+            Tab2
+        </div>
+        <div class="tab-content color-white" data-tab-name="Tab3" role="tabpanel">
+            Tab3
+        </div>
+    </div>
 </div>
-
-<script>
-$('bb-tabs-section').tabs();
-</script>
 {% endexample %}
 
-### __Vertical tabs__
+You can activate your custom tabs element using jQuery:
+
+```javascript
+$('.my-custom-selector').tabsSimple();
+```
+
+---
+
+### __Vertical tabs with AngularJS__
 
 Used in private area and implemented as AngularJS component `<bb-secondary-tabs>`. All you need is to set `base-path` attribute with route name.
 It will fetch child routes of the `base-path` and generate tabs with routes. 
@@ -220,20 +231,35 @@ It will fetch child routes of the `base-path` and generate tabs with routes.
 </div>
 {% endexample %}
 
-Blank tabs markup will look like:
+---
+
+### __Vertical tabs with jQuery (classic)__
+
+Here is an example:
 
 {% example html %}
-<section class="section-with-tabs">
-    <div class="tabs-section">
-        <div class="tab">
-            <span>Tab name</span>
+<section class="tabs-simple section-with-tabs" data-tabs="horizontal-tabs" data-tabs-theme="light">
+    <div class="tabs-section" role="tablist">
+        <div class="tab" data-tab-open="Tab1" role="tab">
+            Tab name
         </div>
-        <div class="tab">
-            <span>Second tab name</span>
+        <div class="tab" data-tab-open="Tab2" role="tab">
+            Second tab name
         </div>
     </div>
     <div class="content-section">
-        <div ui-view></div>
+        <div class="tab-content" data-tab-name="Tab1" role="tabpanel">
+            Tab1
+        </div>
+        <div class="tab-content" data-tab-name="Tab2" role="tabpanel">
+            Tab2
+        </div>
     </div>
 </section>
 {% endexample %}
+
+You can activate your custom tabs element using jQuery:
+
+```javascript
+$('.my-custom-selector').tabsSimple();
+```
