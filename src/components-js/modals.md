@@ -258,8 +258,8 @@ A rendered modal with header, body, and set of actions in the footer.
 {% example html %}
 <button class="button button-main" onclick="$('#testModal').modal('show')">Share & earn</button>
 
-<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+<div class="modal fade ngdialog ngdialog-theme-plain share-and-earn-modal" id="testModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog ngdialog-content" role="document">
         <div class="login-modal-container">
             <section class="bg-green share-vote bottom-triangle plr-30 ptb-30" id="ngdialog2-aria-describedby">
                 <div ng-hide="$ctrl.voted">
@@ -354,6 +354,7 @@ A rendered modal with header, body, and set of actions in the footer.
             </section>
             <!-- ngIf: $ctrl.shared -->
         </div>
+        <div class="ngdialog-close"></div>
     </div>
 </div>
 {% endexample %}
