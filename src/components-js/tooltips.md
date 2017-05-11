@@ -78,14 +78,11 @@ Four options are available: top, right, bottom, and left aligned.
 ### Four directions
 
 {% example html %}
-<div class="mb-20">
-<button type="button" class="button button-main" data-toggle="tooltip" data-placement="left" title="Tooltip on left" >Tooltip on left</button>
-
-<button type="button" class="button button-main" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-
-<button type="button" class="button button-main" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-
-<button type="button" class="button button-main" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+<div class="fx fx-x-sb mb-20">
+    <button type="button" class="button button-second" data-toggle="tooltip" data-placement="left" title="Tooltip on left" >Tooltip on left</button>
+    <button type="button" class="button button-second" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="button button-second" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="button button-second" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
 </div>
 {% endexample %}
 
@@ -135,3 +132,13 @@ To add a tooltip to a **disabled** or **.disabled** element, put the element ins
 
 
 See options and more information on [bootstrap tooltips](http://getbootstrap.com/javascript/#tooltips "The bootstrap tooltip info")
+
+## AngularJS tooltips
+
+To activate tooltip in your applicateion add directive `bb-tooltip` as attribute.
+
+#### Example 
+
+```html
+<div bb-tooltip="This is text in tooltip!"></div>
+```
