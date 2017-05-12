@@ -122,12 +122,6 @@ A rendered modal with header, body, and set of actions in the footer.
             </a>
         </div>
         <div class="modal-content">
-            <div class="loader-container">
-                <div class="loader"></div>
-                <div class="login-error">
-                    User not found!
-                </div>
-            </div>
             <section id="login">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon bb-icon-close"></i></button>
@@ -217,7 +211,7 @@ A rendered modal with header, body, and set of actions in the footer.
                                         Password is too short (minimum is 8 characters)
                                     </div>
                                     <div data-error="maxlength">
-                                        bloombees;webapp;error;warning_min_characters
+                                        Maximum characters is 50
                                     </div>
                                 </div>
                             </div>
@@ -241,13 +235,6 @@ A rendered modal with header, body, and set of actions in the footer.
                     form here
                 </div>
             </section>
-            <section id="forgot-error" class="hidden">
-                <div class="modal-body">
-                    <img src="https://cdn.bloombees.com/static/directives/public/forgotpassword/img/error.png" class="center-block">
-                    <p>User not found</p>
-                    <button>Please, try again</button>
-                </div>
-            </section>
         </div>
     </div>
 </div>
@@ -263,32 +250,34 @@ A rendered modal with header, body, and set of actions in the footer.
         <div class="login-modal-container">
             <section class="bg-green share-vote bottom-triangle plr-30 ptb-30" id="ngdialog2-aria-describedby">
                 <div ng-hide="$ctrl.voted">
-                    <h3 class="fs-24 mtb-0 lh-12 lh-xx-10 ff-regular color-white" id="ngdialog2-aria-labelledby" tabindex="-1" style="outline: 0px;">Promoting <span ng-bind="ngDialogData.product.Product_name" class="ng-binding">baby music lover</span></h3>
-                    <p class="fs-16 fs-xx-12 lh-12">Sold by <span ng-bind="ngDialogData.product.Store_name" class="ng-binding">beeRacheltest0212b</span> <a ng-href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" target="_blank" href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341"><span class="icon-bb icon-link-straight color-white fs-20 va-middle"></span></a></p>
+                    <h3 class="fs-24 mtb-0 lh-12 lh-xx-10 ff-regular color-white" id="ngdialog2-aria-labelledby">Promoting <span >baby music lover</span></h3>
+                    <p class="fs-16 fs-xx-12 lh-12">
+                        Sold by <span>beeRacheltest0212b</span> <a target="_blank" href="#"><span class="icon-bb icon-link-straight color-white fs-20 va-middle"></span></a>
+                    </p>
                     <div class="fx fx-row fx-x-sb fx-y-center share-and-earn-vote">
                         <div class="fx-40 prices-block fs-13 fs-xx-14">
                             <div class="fx fx-x-sb lh-14">
                                 <span>Price</span>
                                 <div>
-                                    <span ng-bind="ngDialogData.currency" class="ng-binding">€</span>
-                                    <span ng-bind="$ctrl.renderPrice(ngDialogData.product.Product_price)" class="ng-binding">7.5</span>
+                                    <span>€</span>
+                                    <span>7.5</span>
                                 </div>
                             </div>
                             <div class="fx fx-x-sb lh-14 color-white">
                                 <span>You earn</span>
                                 <div>
-                                    <span ng-bind="ngDialogData.currency" class="ng-binding">€</span>
-                                    <span ng-bind="ngDialogData.commission" class="ng-binding">0.75</span>
+                                    <span>€</span>
+                                    <span>0.75</span>
                                 </div>
                             </div>
                         </div>
                         <div class="vertical-line hidden-xxs"></div>
                         <div class="voting-container">
-                            <vote-product ng-class="{'visible': ngDialogData.resolved}" class="fx fx-x-sb fx-y-center color-white fx-45 voting-block ng-isolate-scope visible" voted="$ctrl.voted" product="ngDialogData.product" style="">
-                                <button class="button button-vote button-vote-like icon-bb icon-like fs-20 fx-40" ng-class="{'voted': vote.product.Product_liked}" ng-click="vote.like()"></button>
-                                <button class="button button-vote button-vote-dislike icon-bb icon-dislike fs-20 fx-40" ng-class="{'voted': vote.product.Product_disliked}" ng-click="vote.dislike()"></button>
-                                <div class="fx fx-x-center fx-y-center color-white fs-16 icon-bb icon-help ng-isolate-scope" bb-tooltip="Voting helps Bloombees to evaluate the quality of promotable products." data-original-title="" title=""></div>    
-                            </vote-product>
+                            <div class="fx fx-x-sb fx-y-center color-white fx-45 voting-block visible">
+                                <button class="button button-vote button-vote-like icon-bb icon-like fs-20 fx-40"></button>
+                                <button class="button button-vote button-vote-dislike icon-bb icon-dislike fs-20 fx-40"></button>
+                                <div class="fx fx-x-center fx-y-center color-white fs-16 icon-bb icon-help" data-toggle="tooltip" title="Voting helps Bloombees to evaluate the quality of promotable products."></div>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,14 +288,14 @@ A rendered modal with header, body, and set of actions in the footer.
                     <p class="mt-5 mb-10 lh-12">You can add your custom message depending on the network you select below</p>
                 </span>
                 <div class="post-preview-inner fx fx-x-sb">
-                    <div class="post-img fx-30" ng-style="{ backgroundImage: 'url(' + (ngDialogData.product.Product_imageUrl || ngDialogData.product.Product_pictures[0].Picture_td160x160Url) + ')' }" style="background-image: url(&quot;https://bloombees-googlestorage-7pxvh1vxhs.netdna-ssl.com/bloombees-public/upload2017/dev/stores/1957_beeracheltest0212b/products/228SJ/beeracheltest0212b-228SJ-baby_music_lover-td-16385.jpeg&quot;);"></div>
+                    <div class="post-img fx-30" style="background-image: url(&quot;https://bloombees-googlestorage-7pxvh1vxhs.netdna-ssl.com/bloombees-public/upload2017/dev/stores/1957_beeracheltest0212b/products/228SJ/beeracheltest0212b-228SJ-baby_music_lover-td-16385.jpeg&quot;);"></div>
                     <div class="post-desc fx-65">
                         <p class="fs-16 fs-xx-12 lh-11 color-discover-font">
-                            <span ng-bind="ngDialogData.product.Store_uniqueId" class="ng-binding">beeracheltest0212b</span> | <span ng-bind="ngDialogData.product.Product_name" class="ng-binding">baby music lover</span>
+                            <span>beeracheltest0212b</span> | <span>baby music lover</span>
                         </p>
-                        <p class="fs-13 fs-xx-12 preview-description color-discover-font ng-binding" ng-bind="ngDialogData.product.Product_description">baby music lover</p>
+                        <p class="fs-13 fs-xx-12 preview-description color-discover-font">baby music lover</p>
                         <p class="fs-13 fs-xx-12 lh-10">
-                            <a ng-href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" class="color-private-filter" target="_blank" href="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">Bloombees.com</a>
+                            <a class="color-private-filter" target="_blank" href="#">Bloombees.com</a>
                         </p>
                     </div>
                 </div>
@@ -315,46 +304,45 @@ A rendered modal with header, body, and set of actions in the footer.
                 <p class="fs-16 fs-xx-14 color-discover-font">Make your choiсe...</p>
                 <div class="shared-networks pt-15 pb-50">
                     <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-                        <li class="facebook" socialshare="" socialshare-provider="facebook" socialshare-popup-width="500" socialshare-popup-height="500" ng-click="$ctrl.share('facebook')">
+                        <li class="facebook">
                            <span class="icon bb-icon-facebook"></span>
                         </li>
-                        <li class="twitter" socialshare="" socialshare-provider="twitter" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('twitter')">
+                        <li class="twitter">
                             <span class="icon bb-icon-twitter"></span>
                         </li>
-                        <li class="google" socialshare="" socialshare-provider="google" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('google')">
+                        <li class="google">
                             <span class="icon bb-icon-google-plus"></span>
                         </li>
-                        <li class="linkedin" socialshare="" socialshare-provider="linkedin" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('lingedin')">
+                        <li class="linkedin">
                             <span class="icon bb-icon-linkedin"></span>
                         </li>
-                        <li class="pinterest hidden-xxs" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+                        <li class="pinterest hidden-xxs">
                             <span class="icon bb-icon-pinterest"></span>
                         </li>
-                        <li class="copy-link hidden-xxs" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+                        <li class="copy-link hidden-xxs">
                             <span class="icon bb-icon-link"></span>
                         </li>
-                        <li class="email hidden-xxs" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+                        <li class="email hidden-xxs">
                             <span class="icon bb-icon-email"></span>
                         </li>
                     </ul>
                     <div class="visible-xxs">
                         <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-                            <li class="pinterest" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+                            <li class="pinterest">
                                 <span class="icon bb-icon-pinterest"></span>
                             </li>
-                            <li class="copy-link" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+                            <li class="copy-link">
                                 <span class="icon bb-icon-link"></span>
                             </li>
-                            <li class="email" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+                            <li class="email">
                                 <span class="icon bb-icon-email"></span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
-            <!-- ngIf: $ctrl.shared -->
         </div>
-        <div class="ngdialog-close"></div>
+        <div class="ngdialog-close" data-dismiss="modal" aria-label="Close"></div>
     </div>
 </div>
 {% endexample %}

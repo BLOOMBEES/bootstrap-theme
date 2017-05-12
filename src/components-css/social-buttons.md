@@ -36,39 +36,39 @@ Bloombees theme includes three main type of buttons, each comming in three varia
 ### Round buttons
 
 {% example html %}
-<div class="shared-networks pt-15 pb-50">
+<div class="shared-networks">
     <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-        <li class="facebook" socialshare="" socialshare-provider="facebook" socialshare-popup-width="500" socialshare-popup-height="500" ng-click="$ctrl.share('facebook')">
+        <li class="facebook">
            <span class="icon bb-icon-facebook"></span>
         </li>
-        <li class="twitter" socialshare="" socialshare-provider="twitter" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('twitter')">
+        <li class="twitter">
             <span class="icon bb-icon-twitter"></span>
         </li>
-        <li class="google" socialshare="" socialshare-provider="google" socialshare-popup-width="500" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('google')">
+        <li class="google">
             <span class="icon bb-icon-google-plus"></span>
         </li>
-        <li class="linkedin" socialshare="" socialshare-provider="linkedin" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('lingedin')">
+        <li class="linkedin">
             <span class="icon bb-icon-linkedin"></span>
         </li>
-        <li class="pinterest hidden-xxs" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+        <li class="pinterest hidden-xxs">
             <span class="icon bb-icon-pinterest"></span>
         </li>
-        <li class="copy-link hidden-xxs" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+        <li class="copy-link hidden-xxs">
             <span class="icon bb-icon-link"></span>
         </li>
-        <li class="email hidden-xxs" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+        <li class="email hidden-xxs">
             <span class="icon bb-icon-email"></span>
         </li>
     </ul>
     <div class="visible-xxs">
         <ul class="list-unstyled fx fx-row fx-x-sb fx-y-center">
-            <li class="pinterest" socialshare="" socialshare-provider="pinterest" socialshare-popup-width="700" socialshare-popup-height="500" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341" ng-click="$ctrl.share('pinterest')">
+            <li class="pinterest">
                 <span class="icon bb-icon-pinterest"></span>
             </li>
-            <li class="copy-link" ng-click="$ctrl.copyLink(ngDialogData.product.Product_Url)">
+            <li class="copy-link">
                 <span class="icon bb-icon-link"></span>
             </li>
-            <li class="email" socialshare="" socialshare-provider="email" socialshare-url="https://dev.bloombees.com/shopping/beeracheltest0212b/228SJ?promoCode=7341&amp;utm_source=socialnetwork&amp;utm_medium=referral&amp;utm_campaign=shareandearn7341">
+            <li class="email">
                 <span class="icon bb-icon-email"></span>
             </li>
         </ul>
