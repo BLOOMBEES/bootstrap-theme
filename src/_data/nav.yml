@@ -10,10 +10,11 @@
 - title: Components CSS
   pages:
     - title: Buttons
-    - title: Social buttons
+    - title: Headers
     - title: Icons
     - title: Inputs
-    - title: Headers
+    - title: Product cards
+    - title: Social buttons
     - title: Tables
 - title: Components JS
   pages:

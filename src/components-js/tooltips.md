@@ -133,6 +133,43 @@ To add a tooltip to a **disabled** or **.disabled** element, put the element ins
 
 See options and more information on [bootstrap tooltips](http://getbootstrap.com/javascript/#tooltips "The bootstrap tooltip info")
 
+---
+
+## Custom tooltip with HTML
+
+It is possible to use HTML element as content fot the tooltip.
+
+{% example html %}
+<div class="position-r ptb-30">
+    <div class="balance-chart-help">
+        <i class="icon bb-icon-help-in-o-tiny balance-help-icon"></i>
+        <div class="help-tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-text">
+                <div class="stat-info">
+                    <span class="stat-title" style="color: rgb(22, 145, 183);">Already withdrawn:</span>
+                    <span class="stat-message">The total amount that has been successfully withdrawn by you.</span>
+                </div>
+                <div class="stat-info" ng-repeat="stat in balance.chartDataStats">
+                    <span class="stat-title" style="color: rgb(255, 174, 0);">Withdraw in process:</span>
+                    <span class="stat-message">The total amount of withdrawals that have been requested by you but are not yet completed.</span>
+                </div>
+                <div class="stat-info ng-scope">
+                    <span class="stat-title" style="color: rgb(252, 74, 100);">Amount on hold:</span>
+                    <span class="stat-message">These are your earnings on orders that are within the Hold period. If you are a Pro Plan subscriber, these amounts are from Orders delivered less than 48 hours ago. If you are a Free Trial or Lite subscriber, these amounts are from Orders delivered less than &#8203;20 days ago. Once the Hold period expires, subject to any applicable returns or refunds, these amounts will become Available to withdraw.&#8203; Please relate to article 5.2.1 of our Pricing, Commissions &amp; Payout Policy included in our T&amp;C &#8203;for more information.</span>
+                </div>
+                <div class="stat-info ng-scope">
+                    <span class="stat-title" style="color: rgb(57, 198, 197);">Available to withdraw</span>
+                    <span class="stat-message">Available to withdraw amount is calculated based on the total number of completed orders minus total commissions and previous withdrawals.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endexample %}
+
+---
+
 ## AngularJS tooltips
 
 To activate tooltip in your applicateion add directive `bb-tooltip` as attribute.
