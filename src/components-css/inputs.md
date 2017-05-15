@@ -215,14 +215,14 @@ Here is markup:
     <form class="bb-form bb-form__dark">
         <section class="gender-section">
             <label>
-                <input type="radio" name="gender" value="0">
+                <input type="radio" name="male" value="0">
                 <div class="bb-checkbox-box active">
                     <div class="tick"></div>
                 </div>
                 <span>Male</span>
             </label>
             <label>
-                <input type="radio" name="gender" value="1">
+                <input type="radio" name="female" value="1">
                 <div class="bb-checkbox-box">
                     <div class="tick"></div>
                 </div>
