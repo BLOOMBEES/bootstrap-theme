@@ -28,8 +28,8 @@ One way to initialize all tooltips on a page would be to select them by their **
 
 
 <div class="mb-20">
-	<button class="button-action button-circle" type="submit" data-toggle="tooltip" data-placement="bottom" title="Send Shipping Label">
-		<span class="icon bb-icon-cloud-download-o"></span>
+	<button class="button-action button-circle fx fx-x-center fx-y-center" type="submit" data-toggle="tooltip" data-placement="bottom" title="Send Shipping Label">
+		<span class="icon bb-icon-cloud-download-o fs-15"></span>
 	</button>
 </div>
 

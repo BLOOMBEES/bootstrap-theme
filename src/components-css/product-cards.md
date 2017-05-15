@@ -10,7 +10,7 @@ Product cards are very flexible and customizable.
 
 {% example html %}
 <div class="products products-discover">
-    <div class="col-sm-4 col-md-3 col-xl-2 product-container">
+    <div class="col-sm-4 col-md-3 col-xl-3 product-container">
         <div class="products-block">
             <div class="image-preview">
                 <div>
@@ -51,7 +51,7 @@ To select product add class `.selected` to the `.products-block` class.
 
 {% example html %}
 <div class="products products-discover">
-    <div class="col-sm-4 col-md-3 col-xl-2 product-container">
+    <div class="col-sm-4 col-md-3 col-xl-3 product-container">
         <div class="products-block">
             <div class="image-preview">
                 <div>
@@ -86,7 +86,7 @@ To select product add class `.selected` to the `.products-block` class.
             </div>
         </div>
     </div>
-    <div class="col-sm-4 col-md-3 col-xl-2 product-container">
+    <div class="col-sm-4 col-md-3 col-xl-3 product-container">
         <div class="products-block selected">
             <div class="image-preview">
                 <div>
@@ -121,7 +121,7 @@ To select product add class `.selected` to the `.products-block` class.
             </div>
         </div>
     </div>
-    <div class="col-sm-4 col-md-3 col-xl-2 product-container">
+    <div class="col-sm-4 col-md-3 col-xl-3 product-container">
         <div class="products-block">
             <div class="image-preview">
                 <div>
