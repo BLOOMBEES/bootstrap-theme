@@ -2,6 +2,7 @@
   pages:
     - title: Overview
     - title: Grid System
+    - title: Animations
     - title: Flex grid
     - title: Typography
     - title: Variables

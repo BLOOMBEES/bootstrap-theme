@@ -99,6 +99,36 @@ A rendered modal with header, body, and set of actions in the footer.
 </div><!-- /.modal -->
 {% endexample %}
 
+### Modal Header
+
+Is is possible to customize the modal with user avatar or any other image and more complicated header
+
+{% example html %}
+<button class="button button-main mb-20" onclick="$('#myModalHeader').modal('show');">Show Modal</button>
+
+<div class="modal fade" id="myModalHeader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-header-block">
+                    <div class="modal-header-block__avatar">
+                        <img alt="image merchant" src="https://cdn.bloombees.com/static/img/default/user_default.png">
+                    </div>
+                    <div class="modal-header-block__content">
+                        <h3 class="modal-title__blue" id="myModalLabel">Test title<span id="SignUpUserName"></span></h3>
+                        <p>Test title 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cum earum eligendi eum expedita
+                    nam nesciunt voluptatibus voluptatum? Aliquid architecto fuga id nam necessitatibus odio officiis,
+                    placeat quasi sapiente totam!</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{% endexample %}
 ---
 
 ## Sign in modal example

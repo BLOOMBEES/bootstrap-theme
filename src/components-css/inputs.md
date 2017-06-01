@@ -233,6 +233,22 @@ Here is markup:
 </div>
 {% endexample %}
 
+## Checkbox
+
+Fully css native checkbox
+
+{% example html %}
+<div class="bb-checkbox-box-container">
+    <input id="SignUpAgreeBeeViral" name="SignUpAgreeBeeViral" type="checkbox">
+    <label for="SignUpAgreeBeeViral" class="bb-checkbox-box ml-10">
+        <div class="tick"></div>
+    </label>
+    <label class="position-r nt-10 ml-15 inline">I agree and acknowledge that enabling this feature means 
+    I will receive only 80% of the sales price for my 
+    products sold by others.Terms and Conditions and Privacy Policy</label>
+</div>
+{% endexample %}
+
 ## Select
 
 {% example html %}
@@ -250,4 +266,26 @@ Here is markup:
         </div>
     </form>
 </div>
+{% endexample %}
+
+## Radio button
+
+Large square radio buttons which are used in sign up modal 
+{% example html %}
+<div class="row ml-5">
+    <div class="bb-radio-button-container">
+        <div class="bb-radio-button">
+            <input id="SignUpTypeCompany"
+                   name="SignUpType" type="radio" value="company" tabindex="1">
+            <div class="bb-radio-button-label cursor-p">
+                <div class="bb-radio-button-label--image">
+                    <img class="default" src="https://cdn.bloombees.com/static/img/wizard/ic_company.png">
+                    <img class="active" src="https://cdn.bloombees.com/static/img/wizard/ic_company_active.png">
+                </div>
+                <label class="bb-radio-button-label--text" for="SignUpTypeCompany">Sell as Company</label>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endexample %}

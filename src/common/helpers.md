@@ -165,3 +165,27 @@ You can quickly add some properties with nifty shorthanded classes.
 | `.height-*` | Add `height` with value of `2..400` (multiple of 2) |
 | `.hsize-*` | Add `min-height` with value of `10..600` (multiple of 10) |
 {:class="table table-condenced table-hover table-bordered"}
+
+### Progress bar
+
+Simple css progress bar, the current step you can point with `mlp-*` on `.bb-progress-ring` 
+
+{% example html %}
+<div class="row position-r">
+    <div class="bb-progress-content">
+        <div class="bb-progress-container"></div>
+        <div class="bb-progress-ring mlp-40"></div>
+    </div>
+</div>
+{% endexample %}
+
+### Others helpers 
+
+| Class           | Description           |
+|-----------------|-----------------------|
+| `.position-r`   | Relative position     |
+| `.cursor-p`     | Cursor pointer        |
+| `.t-*`          | Add `top` with value of `5..60` |
+| `.va-middle`    | Add `vertical-align: middle` |
+| `.va-textbottom`| Add `vertical-align: text-bottom` |
+| `.line-through` | Add `text-decoration: line-through` |
