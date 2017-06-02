@@ -377,9 +377,31 @@ Is is possible to customize the modal with user avatar or any other image and mo
 </div>
 {% endexample %}
 
+### Error modal example
+
+{% example html %}
+<button class="button button-main" onclick="$('.modal-error').modal('show')">
+    Open error modal
+</button>
+
+<div class="modal modal-error fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog bg-white text-center" role="document">
+        <div class="bg-red">
+            <h3 class="modal-title color-white text-center ptb-15" id="myModalLabel">Error</h3>
+        </div>
+        <div class="modal-body color-red mtb-30 plr-10">
+            <strong>Email is not registered on Bloombees.</strong>
+        </div>
+        <hr>
+        <a href="javascript:void(0)" class="button button-main button-main__close text-uppercase mb-20" data-dismiss="modal" aria-label="Close">Close</a>
+    </div>
+</div>
+{% endexample html %}
+
 ---
 
-### AngularJS modals
+
+## AngularJS modals
 
 To create modal window use service `modalSrv`, which is based on AngularJS library [ngDialog](https://github.com/likeastore/ngDialog). 
 
