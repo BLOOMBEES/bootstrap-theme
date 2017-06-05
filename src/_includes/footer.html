@@ -47,3 +47,28 @@ Holder.addTheme('gray', {
   fontweight: 'normal'
 })
 </script>
+
+{% if page.title == 'Splash window' %}
+<script>
+  var smallDevices = window.matchMedia('(max-width: 991px)');
+
+  function activateSplash(mq) {
+    var splashWindow = $('.splash-apps'),
+      body = $('body');
+
+    if (mq.matches) {
+      splashWindow.removeClass('hidden');
+      body.addClass('no-scroll ngdialog-open');
+    } else {
+      splashWindow.addClass('hidden');
+      body.removeClass('no-scroll ngdialog-open');
+    }
+  }
+
+  smallDevices.addListener(activateSplash);
+
+  $(document).ready(function () {
+    activateSplash(smallDevices);
+  });
+</script>
+{% endif %}

@@ -16,7 +16,7 @@ Inactive loader looks like:
 
 To activate it just add class `.active` to the `.loader-container`.
 
-Parent element of the `.loader-containet` must have `position: relative`, width (min-width) and height (min-height).
+Parent element of the `.loader-container` must have `position: relative`, width (min-width) and height (min-height).
 
 In example below click on the loader to toggle it:
 
@@ -66,7 +66,7 @@ You can override `font-size` of the `.loader` class to change size of the loader
 
 ## Fullscreen loader
 
-Add class `.loader-private` to the default `.loader-container` class to make it fullscreen. Activation with `.active` class as in default.
+Add class `.loader-fs` to the default `.loader-container` class to make it fullscreen. Activation with `.active` class as in default.
 
 Press <kbd>esc</kbd> button to close loader in example below:
 
@@ -76,13 +76,13 @@ Press <kbd>esc</kbd> button to close loader in example below:
     Activate fullscreen loader
 </button>
 
-<div class="loader-container loader-private">
+<div class="loader-container loader-fs">
     <i class="icon bb-icon-bee"></i>
 </div>
 
 <script>
 document.onkeyup = function(e) {
-    var fsLoader = document.getElementsByClassName('loader-private')[0];
+    var fsLoader = document.getElementsByClassName('loader-fs')[0];
 
     if (e.keyCode == 27) {
         fsLoader.classList.remove('active')

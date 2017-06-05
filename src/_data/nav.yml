@@ -20,11 +20,11 @@
     - title: Tables
 - title: Components JS
   pages:
-    - title: Splash window
     - title: Inview
     - title: Modals
     - title: Popup
     - title: SmoothScroll
+    - title: Splash window
     - title: Sticky
     - title: Tabs
     - title: Tooltips

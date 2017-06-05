@@ -10,13 +10,43 @@
       </div>
     </a>
 
+    <!-- Navigation -->
+
     {% include nav-home.html %}
+
+    <!-- Splash window example -->
+
+    {% if page.title == 'Splash window' %}
+
+    <div class="splash-apps fx fx-x-center fx-y-center fx-col text-center hidden">
+      <img class="phone-image img-responsive" src="https://cdn.bloombees.com/static/img/homebees/mobile_version.png">
+      <p class="plr-50 plr-xx-20">Some text above</p>
+      <ul class="list-aside-btn">
+        <li class="list-app-elem">
+          <a class="link-download-app button button-main button-main__small" target="_blank"
+             href="https://itunes.apple.com/us/app/bloombees-post-sell-get-paid/id1071517004?ls=1&mt=8">
+            <img class="logo-app" src="https://cdn.bloombees.com/static/img/homebees/app_store_vec.svg">
+          </a>
+        </li>
+        <li class="list-app-elem">
+          <a class="link-download-app button button-main button-main__small" target="_blank"
+             href="https://play.google.com/store/apps/details?id=com.bloombees.android">
+            <img class="logo-app" src="https://cdn.bloombees.com/static/img/homebees/google_play_vec.svg">
+          </a>
+        </li>
+      </ul>
+      <p class="plr-50 plr-xx-20">Some text below</p>
+    </div>
+
+    {% endif %}
 
     <div class="bd-pageheader">
       <div class="container">
         {% include page-headers.html %}
       </div>
     </div>
+
+    <!-- Content -->
 
     <div class="container">
       <div class="row">
@@ -29,6 +59,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
 
     {% include footer.html %}
   </body>

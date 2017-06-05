@@ -33,13 +33,17 @@ $(document).ready(function () {
 });
 ```
 
-Just put code below inside element you wish to cover on mobile devices.
+Just put HTML code below inside element (`<body>` as obvious) you wish to cover on mobile devices.
+  
+*Note: script disable scroll for `<body>` and do not cover top navigation.*
 
 ---
 
 ### Example
 
-{% example html %}
+To check it resize your browser to the width < 992px (or go into responsive mode in dev tools).
+
+```html
 <div class="splash-apps fx fx-x-center fx-y-center fx-col text-center hidden">
     <img class="phone-image img-responsive" src="https://cdn.bloombees.com/static/img/homebees/mobile_version.png">
     <p class="plr-50 plr-xx-20">Some text above</p>
@@ -59,4 +63,4 @@ Just put code below inside element you wish to cover on mobile devices.
     </ul>
     <p class="plr-50 plr-xx-20">Some text below</p>
 </div>
-{% endexample html %}
+```
