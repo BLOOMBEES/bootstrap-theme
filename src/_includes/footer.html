@@ -48,6 +48,23 @@ Holder.addTheme('gray', {
 })
 </script>
 
+<script>
+  $(window).on('show.bs.modal', function (e) {
+    $('body').addClass('no-scroll-top');
+  });
+  $(window).on('hide.bs.modal', function (e) {
+    $('body').removeClass('no-scroll-top');
+  });
+
+  $(window).on('touchmove', function (e) {
+    var modal = $('.modal');
+
+    if (modal.has($(e.target)).length) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 {% if page.title == 'Splash window' %}
 <script>
   var smallDevices = window.matchMedia('(max-width: 991px)');
