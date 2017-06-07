@@ -21,6 +21,7 @@
 - title: Components JS
   pages:
     - title: Inview
+    - title: Select Input
     - title: Modals
     - title: Popup
     - title: SmoothScroll
