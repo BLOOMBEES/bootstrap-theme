@@ -4,7 +4,7 @@ title: Tables
 group: components-css
 ---
 
-### Description
+### Default tables
 
 | Class | Description |
 |-------|-------------|
@@ -162,3 +162,64 @@ The `.table-responsive` class creates a responsive table. The table will then sc
     </table>
 {% endexample %}
 
+
+---
+
+
+## Custom tables
+
+{% example html %}
+<table class="table-flex col-1-20 col-2-25 col-3-25 col-4-25 col-5-10 col-2-ellipsis col-3-ellipsis col-4-ellipsis col-3-green col-5-success">
+    <tbody>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+        <tr>
+            <td>14/06/2017</td>
+            <td>Ricky Martin</td>
+            <td>RickyMartinStore</td>
+            <td>Pro Plan</td>
+            <td>+50€</td>
+        </tr>
+    </tbody>
+</table>
+{% endexample %}
