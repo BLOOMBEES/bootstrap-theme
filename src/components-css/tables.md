@@ -61,63 +61,91 @@ The `.table-responsive` class creates a responsive table. The table will then sc
 #### `.table-hover`
 
 {% example html %}
-    <table class="table table-hover">
-        <tr>
-            <th>Title 1</th>
-            <th>Title 2</th>
-            <th>Title ...</th>
-            <th>Title n</th>
-        </tr>
-        <tr>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-        </tr>
-        <tr>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-        </tr>
-    </table>
+<table class="table table-hover">
+    <tr>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title ...</th>
+        <th>Title n</th>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+</table>
 {% endexample %}
 
 #### `.table-bordered`
 
 {% example html %}
-    <table class="table table-bordered">
-        <tr>
-            <th>Title 1</th>
-            <th>Title 2</th>
-            <th>Title ...</th>
-            <th>Title n</th>
-        </tr>
-        <tr>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-        </tr>
-        <tr>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-        </tr>
-    </table>
+<table class="table table-bordered">
+    <tr>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title ...</th>
+        <th>Title n</th>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+</table>
 {% endexample %}
 
 #### `.table-condenced`
 
 {% example html %}
-    <table class="table table-condenced">
+<table class="table table-condenced">
+    <tr>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title ...</th>
+        <th>Title n</th>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+        <td>Text</td>
+    </tr>
+</table>
+{% endexample %}
+
+#### `.table-striped`
+
+{% example html %}
+<table class="table table-striped">
+    <thead>
         <tr>
             <th>Title 1</th>
             <th>Title 2</th>
             <th>Title ...</th>
             <th>Title n</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <td>Text</td>
             <td>Text</td>
@@ -130,43 +158,23 @@ The `.table-responsive` class creates a responsive table. The table will then sc
             <td>Text</td>
             <td>Text</td>
         </tr>
-    </table>
+    </tbody>
+</table>
 {% endexample %}
-
-#### `.table-striped`
-
-{% example html %}
-    <table class="table table-striped">
-        <head>
-            <tr>
-                <th>Title 1</th>
-                <th>Title 2</th>
-                <th>Title ...</th>
-                <th>Title n</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Text</td>
-                <td>Text</td>
-                <td>Text</td>
-                <td>Text</td>
-            </tr>
-            <tr>
-                <td>Text</td>
-                <td>Text</td>
-                <td>Text</td>
-                <td>Text</td>
-            </tr>
-        </tbody>
-    </table>
-{% endexample %}
-
 
 ---
 
+| Class | Description |
+|-------|-------------|
+| `.table-flex` | Set table to flex |
+| `.table-flex-*` | Set numbers of columns (`*` can be 2-10), that have equal width |
+| `.col-*-**` | Set column with index number `*` (1-10) width to `**` (5-100) in `%` |
+| `.col-*-ellipsis` | Set column with index number `*` (1-10) to have text overflow (add `...` in the end) |
+| `.col-*-green` | Set column with index number `*` (1-10) to have text color `#2ec6c6` |
+| `.col-*-success` | Set column with index number `*` (1-10) to have text color `#46841e` |
+{:class="table table-bordered"}
 
-## Custom tables
+### Example
 
 {% example html %}
 <table class="table-flex col-1-20 col-2-25 col-3-25 col-4-25 col-5-10 col-2-ellipsis col-3-ellipsis col-4-ellipsis col-3-green col-5-success">
