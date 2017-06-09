@@ -164,6 +164,8 @@ The `.table-responsive` class creates a responsive table. The table will then sc
 
 ---
 
+## Custom table
+
 | Class | Description |
 |-------|-------------|
 | `.table-flex` | Set table to flex |
