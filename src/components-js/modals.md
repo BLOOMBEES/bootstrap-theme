@@ -377,6 +377,62 @@ Is is possible to customize the modal with user avatar or any other image and mo
 </div>
 {% endexample %}
 
+### Require promoter info modal example
+
+{% example html %}
+<button class="button button-main" onclick="$('#signUpReferralModal').modal('show')">
+    Open promoter info modal
+</button>
+
+<div id="signUpReferralModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signUpReferralModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content p-15">
+        <section class="require-promoter-info-section">
+            <header class="mb-30">
+                <h3 class="title fs-22 fs-xx-18 ff-regular">
+                    Title here
+                </h3>
+                <p class="subtitle header-text fs-13 ff-regular color-grey">
+                    Small description goes here
+                </p>
+            </header>
+            <form id="signUpForm" name="signUpForm" autocomplete="off" class="bb-form bb-form__line w-100"  novalidate=""
+                  onsubmit="return false;" role="form" style="height: 100%">
+                <div class="fx fx-x-sb">
+                    <div class="bb-select fs-16 fx-45">
+                        <select id="SignUpReferralCountryIsoCode" class="input">
+                            <option value="es">Spain</option>
+                            <option value="ua">Ukraine</option>
+                            <option value="en">USA</option>
+                            <option value="pl">Poland</option>
+                            <option value="ru">Russia</option>
+                        </select>
+                        <span class="icon bb-icon-dropdown"></span>
+                    </div>
+                    <div class="bb-select fs-16 fx-45">
+                        <select id="SignUpReferralCurrency" class="input">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="uah">UAH</option>
+                            <option value="rub">RUB</option>
+                        </select>
+                        <span class="icon bb-icon-dropdown"></span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="button button-action button-sm mt-60 minw-200" data-dismiss="modal" aria-label="Close">
+                        <span class="fs-16">
+                            All good
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </section>
+        </div>
+    </div>
+</div>
+{% endexample %}
+
 ### Error modal example
 
 {% example html %}
@@ -399,7 +455,6 @@ Is is possible to customize the modal with user avatar or any other image and mo
 {% endexample html %}
 
 ---
-
 
 ## AngularJS modals
 
