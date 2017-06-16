@@ -32,15 +32,15 @@ $('#testSelect').bbSelect(); // will return a value of checked radio button
                 <ul class="radio">
                     <li>
                         <input type="radio" value="1" name="test" id="test-0"> <!-- Group of radio-buttons -->
-                        <label for="test-0">Option 1</label>
+                        <label for="test-0">A Option 1</label>
                     </li>
                     <li>
                         <input type="radio" value="2" name="test" id="test-1"> <!-- Group of radio-buttons -->
-                        <label for="test-1">Option 2</label>
+                        <label for="test-1">B Option 2</label>
                     </li>
                     <li>
                         <input type="radio" value="3" name="test" id="test-2"> <!-- Group of radio-buttons -->
-                        <label for="test-2">Option 3</label>
+                        <label for="test-2">C Option 3</label>
                     </li>
                 </ul>
             </div>
