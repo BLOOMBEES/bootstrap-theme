@@ -211,9 +211,9 @@ Here is markup:
 ## Radio button
 
 {% example html %}
-<div class="bg-discover personal-details-section ptb-15 plr-15">
+<div class="bg-discover ptb-15 plr-15">
     <form class="bb-form bb-form__dark">
-        <section class="gender-section">
+        <section class="radio-buttons">
             <label>
                 <input type="radio" name="male" value="0">
                 <div class="bb-checkbox-box active">
